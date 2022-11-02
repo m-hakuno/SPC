@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Row1>
+		<null>0</null>
+		<Text>選択</Text>
+		<RowSpan>1</RowSpan>
+		<ColSpan>1</ColSpan>
+	</Row1>
+	<Row1>
+		<null>0</null>
+		<Text>対応コード</Text>
+		<RowSpan>1</RowSpan>
+		<ColSpan>1</ColSpan>
+	</Row1>
+	<Row1>
+		<null>0</null>
+		<Text>対応日時</Text>
+		<RowSpan>1</RowSpan>
+		<ColSpan>1</ColSpan>
+	</Row1>
+	<Row1>
+		<null>0</null>
+		<Text>対応担当</Text>
+		<RowSpan>1</RowSpan>
+		<ColSpan>1</ColSpan>
+	</Row1>
+	<Row1>
+		<null>0</null>
+		<Text>対応内容</Text>
+		<RowSpan>1</RowSpan>
+		<ColSpan>1</ColSpan>
+	</Row1>
+</Root>

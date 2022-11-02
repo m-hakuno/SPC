@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Row>
+    <FieldType>Bound</FieldType>
+    <HeaderText>調査日時</HeaderText>
+    <Width>200</Width>
+    <HorizontalAlign>left</HorizontalAlign>
+    <DataField>調査日時</DataField>
+    <ReadOnly>1</ReadOnly>
+    <Visible>1</Visible>
+  </Row>
+  <Row>
+    <FieldType>Bound</FieldType>
+    <HeaderText>調査者</HeaderText>
+    <Width>150</Width>
+    <HorizontalAlign>left</HorizontalAlign>
+    <DataField>調査者</DataField>
+    <ReadOnly>1</ReadOnly>
+    <Visible>1</Visible>
+  </Row>
+  <Row>
+    <FieldType>Bound</FieldType>
+    <HeaderText>調査結果</HeaderText>
+    <Width>840</Width>
+    <HorizontalAlign>left</HorizontalAlign>
+    <DataField>調査結果</DataField>
+    <ReadOnly>1</ReadOnly>
+    <Visible>1</Visible>
+  </Row>
+</Root>

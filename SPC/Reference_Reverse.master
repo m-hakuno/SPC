@@ -1,0 +1,77 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="Reference_Reverse.master.vb" Inherits="SPC.reference_Reverse" %>
+<%@ MasterType VirtualPath="~/Site.Master" %>
+<asp:Content ID="HeadContent" ContentPlaceHolderID="cphHeadContent" runat="server">
+</asp:Content>
+
+<asp:Content ID="MainContent" ContentPlaceHolderID="cphMainContent" runat="server">
+    
+    <div>
+        <asp:MultiView ID="muvList" runat="server">
+            <asp:View ID="vieList" runat="server">
+                <div class="list">
+                    <asp:ContentPlaceHolder ID="cphListContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </asp:View>
+            <asp:View ID="vieDetail" runat="server">
+                <div class="detail">
+                    <asp:ContentPlaceHolder ID="cphDetailContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </asp:View>
+        </asp:MultiView>
+    </div>
+    <br />
+    <div>
+        <asp:ContentPlaceHolder ID="cphUpdateContent" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <br />
+    <div class="search">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <div ID="divCount" runat="server" class="float-right">
+                        <table>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblCountTitle" runat="server" Text="該当件数："></asp:Label>
+                                </td>
+                                <td style="width: 80px">
+                                    <div class="float-right">
+                                        <asp:Label ID="lblCount" runat="server" Text="XXXXX"></asp:Label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblCountUnit" runat="server" Text="件"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <asp:ContentPlaceHolder ID="cphSearchContent" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="float-left">
+                        <asp:ValidationSummary ID="vasSummary" runat="server" CssClass="errortext" />
+                    </div>
+                    <div class="float-right">
+                        <asp:Button ID="btnSearchRigth5" runat="server" Text="Button" Visible="False" />
+                        &nbsp;<asp:Button ID="btnSearchRight4" runat="server" Text="Button" Visible="False" />
+                        &nbsp;<asp:Button ID="btnSearchRight3" runat="server" Text="Button" Visible="False" />
+                        &nbsp;<asp:Button ID="btnSearchRight2" runat="server" Text="検索条件クリア" Visible="False" />
+                        &nbsp;<asp:Button ID="btnSearchRight1" runat="server" Text="検索" Visible="False" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</asp:Content>

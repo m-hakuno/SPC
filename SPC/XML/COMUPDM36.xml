@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Row>
+    <FieldType>Button</FieldType>
+    <HeaderText>選択</HeaderText>
+    <Width>50</Width>
+    <HorizontalAlign>Center</HorizontalAlign>
+    <Text>選択</Text>
+    <ValidationGroup></ValidationGroup>
+    <CommandName>Select</CommandName>
+    <ButtonType>Button</ButtonType>
+  </Row>
+  <Row>
+    <FieldType>Bound</FieldType>
+    <HeaderText>年月日</HeaderText>
+    <Width>90</Width>
+    <HorizontalAlign>Center</HorizontalAlign>
+    <DataField>年月日</DataField>
+    <ReadOnly>1</ReadOnly>
+    <Visible>1</Visible>
+  </Row>
+</Root>

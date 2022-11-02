@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WATINQP001_DATASET" targetNamespace="http://tempuri.org/WATINQP001_DATASET.xsd" xmlns:mstns="http://tempuri.org/WATINQP001_DATASET.xsd" xmlns="http://tempuri.org/WATINQP001_DATASET.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="WATINQP001_DATASET" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="WATINQP001_DATASET" msprop:Generator_UserDSName="WATINQP001_DATASET">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="KeepInquiryDtt" msprop:Generator_TableClassName="KeepInquiryDttDataTable" msprop:Generator_TableVarName="tableKeepInquiryDtt" msprop:Generator_TablePropName="KeepInquiryDtt" msprop:Generator_RowDeletingName="KeepInquiryDttRowDeleting" msprop:Generator_RowChangingName="KeepInquiryDttRowChanging" msprop:Generator_RowEvHandlerName="KeepInquiryDttRowChangeEventHandler" msprop:Generator_RowDeletedName="KeepInquiryDttRowDeleted" msprop:Generator_UserTableName="KeepInquiryDtt" msprop:Generator_RowChangedName="KeepInquiryDttRowChanged" msprop:Generator_RowEvArgName="KeepInquiryDttRowChangeEvent" msprop:Generator_RowClassName="KeepInquiryDttRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="データ種別コード" msprop:Generator_ColumnVarNameInTable="columnデータ種別コード" msprop:Generator_ColumnPropNameInRow="データ種別コード" msprop:Generator_ColumnPropNameInTable="データ種別コードColumn" msprop:Generator_UserColumnName="データ種別コード" type="xs:string" minOccurs="0" />
+              <xs:element name="データ種別" msprop:Generator_ColumnVarNameInTable="columnデータ種別" msprop:Generator_ColumnPropNameInRow="データ種別" msprop:Generator_ColumnPropNameInTable="データ種別Column" msprop:Generator_UserColumnName="データ種別" type="xs:string" minOccurs="0" />
+              <xs:element name="TBOX運用日" msprop:Generator_ColumnVarNameInTable="columnTBOX運用日" msprop:Generator_ColumnPropNameInRow="TBOX運用日" msprop:Generator_ColumnPropNameInTable="TBOX運用日Column" msprop:Generator_UserColumnName="TBOX運用日" type="xs:string" minOccurs="0" />
+              <xs:element name="BB1シリアル番号" msprop:Generator_ColumnVarNameInTable="columnBB1シリアル番号" msprop:Generator_ColumnPropNameInRow="BB1シリアル番号" msprop:Generator_ColumnPropNameInTable="BB1シリアル番号Column" msprop:Generator_UserColumnName="BB1シリアル番号" type="xs:string" minOccurs="0" />
+              <xs:element name="CID" msprop:Generator_ColumnVarNameInTable="columnCID" msprop:Generator_ColumnPropNameInRow="CID" msprop:Generator_ColumnPropNameInTable="CIDColumn" msprop:Generator_UserColumnName="CID" type="xs:string" minOccurs="0" />
+              <xs:element name="入金伝票番号" msprop:Generator_ColumnVarNameInTable="column入金伝票番号" msprop:Generator_ColumnPropNameInRow="入金伝票番号" msprop:Generator_ColumnPropNameInTable="入金伝票番号Column" msprop:Generator_UserColumnName="入金伝票番号" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

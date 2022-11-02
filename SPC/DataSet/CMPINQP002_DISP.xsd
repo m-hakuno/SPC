@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CMPINQP002_DISP" targetNamespace="http://tempuri.org/CMPINQP002_DISP.xsd" xmlns:mstns="http://tempuri.org/CMPINQP002_DISP.xsd" xmlns="http://tempuri.org/CMPINQP002_DISP.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CMPINQP002_DISP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CMPINQP002_DISP" msprop:Generator_UserDSName="CMPINQP002_DISP">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CMPINQP002_DISP" msprop:Generator_TableClassName="CMPINQP002_DISPDataTable" msprop:Generator_TableVarName="tableCMPINQP002_DISP" msprop:Generator_TablePropName="_CMPINQP002_DISP" msprop:Generator_RowDeletingName="CMPINQP002_DISPRowDeleting" msprop:Generator_RowChangingName="CMPINQP002_DISPRowChanging" msprop:Generator_RowEvHandlerName="CMPINQP002_DISPRowChangeEventHandler" msprop:Generator_RowDeletedName="CMPINQP002_DISPRowDeleted" msprop:Generator_UserTableName="CMPINQP002_DISP" msprop:Generator_RowChangedName="CMPINQP002_DISPRowChanged" msprop:Generator_RowEvArgName="CMPINQP002_DISPRowChangeEvent" msprop:Generator_RowClassName="CMPINQP002_DISPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="情報機器保守の報告書兼検収書" msprop:Generator_ColumnVarNameInTable="column情報機器保守の報告書兼検収書" msprop:Generator_ColumnPropNameInRow="情報機器保守の報告書兼検収書" msprop:Generator_ColumnPropNameInTable="情報機器保守の報告書兼検収書Column" msprop:Generator_UserColumnName="情報機器保守の報告書兼検収書" type="xs:string" minOccurs="0" />
+              <xs:element name="保守料金明細" msprop:Generator_ColumnVarNameInTable="column保守料金明細" msprop:Generator_ColumnPropNameInRow="保守料金明細" msprop:Generator_ColumnPropNameInTable="保守料金明細Column" msprop:Generator_UserColumnName="保守料金明細" type="xs:string" minOccurs="0" />
+              <xs:element name="特別保守費用一覧" msprop:Generator_ColumnVarNameInTable="column特別保守費用一覧" msprop:Generator_ColumnPropNameInRow="特別保守費用一覧" msprop:Generator_ColumnPropNameInTable="特別保守費用一覧Column" msprop:Generator_UserColumnName="特別保守費用一覧" type="xs:string" minOccurs="0" />
+              <xs:element name="緊急運営輸送費" msprop:Generator_ColumnVarNameInTable="column緊急運営輸送費" msprop:Generator_ColumnPropNameInRow="緊急運営輸送費" msprop:Generator_ColumnPropNameInTable="緊急運営輸送費Column" msprop:Generator_UserColumnName="緊急運営輸送費" type="xs:string" minOccurs="0" />
+              <xs:element name="有償部品費用" msprop:Generator_ColumnVarNameInTable="column有償部品費用" msprop:Generator_ColumnPropNameInRow="有償部品費用" msprop:Generator_ColumnPropNameInTable="有償部品費用Column" msprop:Generator_UserColumnName="有償部品費用" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

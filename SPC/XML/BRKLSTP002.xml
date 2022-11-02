@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Row>
+		<FieldType>Bound</FieldType>
+		<HeaderText>コード</HeaderText>
+		<Width>50</Width>
+		<HorizontalAlign>Center</HorizontalAlign>
+		<DataField>ＴＢＯＸ機種コード</DataField>
+		<ReadOnly>1</ReadOnly>
+		<Visible>1</Visible>
+	</Row>
+	<Row>
+		<FieldType>Bound</FieldType>
+		<HeaderText>機種名</HeaderText>
+		<Width>140</Width>
+		<HorizontalAlign>Left</HorizontalAlign>
+		<DataField>ＴＢＯＸ機種名</DataField>
+		<ReadOnly>1</ReadOnly>
+		<Visible>1</Visible>
+	</Row>
+	<Row>
+		<FieldType>CheckBox</FieldType>
+		<HeaderText></HeaderText>
+		<Width>50</Width>
+		<HorizontalAlign>Center</HorizontalAlign>
+		<DataField>ＣＨＥＣＫ</DataField>
+		<ReadOnly>0</ReadOnly>
+		<Visible>1</Visible>
+	</Row>
+</Root>

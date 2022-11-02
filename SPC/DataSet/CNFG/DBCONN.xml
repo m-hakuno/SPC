@@ -1,0 +1,19 @@
+<NewDataSet>
+  <_x0030_>
+    <Provider />
+    <Driver />
+    <DataSource>172.27.2.243</DataSource>
+    <Serv />
+    <DSN />
+    <UserID>SPC_Dvlt_User</UserID>
+    <Password>SPC_SQL_User</Password>
+    <Collect />
+    <Port />
+    <System />
+    <Dbq />
+    <DftPkgLib />
+    <LanguageID />
+    <Pkg />
+    <Schema>SPCDB</Schema>
+   </_x0030_>
+</NewDataSet>

@@ -1,0 +1,127 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="SPC.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head runat="server">
+        <meta http-equiv="X-UA-Compatible" content="IE=8;IE=9;IE=10"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title></title>
+        <link href="~/Images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <asp:ContentPlaceHolder runat="server" ID="cphHeadContent" />
+        <script src="Scripts/fixed.js" type="text/javascript"></script>
+        <script src="Scripts/isDate.js" type="text/javascript"></script>
+        <script src="Scripts/windowOpen.js" type="text/javascript"></script>
+        <script src="Scripts/windowClose.js" type="text/javascript"></script>
+        <script src="Scripts/closeCheck.js" type="text/javascript"></script>
+        <script src="Scripts/onEnter.js" type="text/javascript"></script>
+        <script src="Scripts/PopupJ.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <form runat="server">
+            <div id="header" class="header">
+                <span class="site-systemName">
+                    <asp:Label ID="lblSystemName" runat="server" Text="サポートセンタシステム"></asp:Label>
+                </span>
+                <div>
+                    <hr />  
+                </div>
+                <span class="float-right" style="float: left">
+                    <span class="site-programID">
+                        <asp:Label ID="lblProgramID" runat="server" Text="≪プログラムID≫"></asp:Label>
+                    </span>
+                </span>
+                <span style="float: right" class="float-right">
+                    <span class="site-loginID">
+                        <asp:LoginName ID="lnmLoginNm" runat="server" FormatString="【{0}】" />
+                    </span>
+                    <span class="site-logout">
+                        <asp:LinkButton ID="lkbLogout" runat="server" OnClientClick="(window.open('','_self').opener=window).close();">[閉じる]</asp:LinkButton>
+                    </span>
+                </span>
+                <br />
+                <asp:Panel ID="pnlBreadcrumblist" runat="server" CssClass="site-blist">
+                    <asp:Label ID="lblBreadcrumblist" runat="server" Text="　"> </asp:Label>
+                </asp:Panel>
+                <br />
+                <div class="text-center">
+                    <span class="site-title">
+                        <asp:Label ID="lblTitle" runat="server" Text="画面名称"></asp:Label>
+                    </span>
+                </div>
+            </div>
+            <div class="contentplace">
+                <div>
+                <ajaxToolkit:ToolkitScriptManager ID="tsmManager" runat="server" EnableScriptGlobalization="True">
+                    <Scripts>
+                        <asp:ScriptReference Path="Scripts/isDate.js" />
+                        <asp:ScriptReference Path="Scripts/fixed.js" />
+                        <asp:ScriptReference Path="Scripts/windowOpen.js" />
+                        <asp:ScriptReference Path="Scripts/windowClose.js" />
+                        <asp:ScriptReference Path="Scripts/closeCheck.js" />
+                        <asp:ScriptReference Path="Scripts/onEnter.js" />
+                        <asp:ScriptReference Path="Scripts/PopupJ.js" />
+                    </Scripts>
+                </ajaxToolkit:ToolkitScriptManager>
+            <%--ＶＢＳとＪＡＳＣＲＩＰＴの切り替え箇所--%>
+<%--                <script src='<%= Me.ResolveClientUrl("~/Scripts/popup.vbs")%>' type="text/VBScript"></script>--%>
+                <script src='<%= Me.ResolveClientUrl("~/Scripts/PopupJ.js")%>' type="text/JavaScript"></script>
+            <%--ＶＢＳとＪＡＳＣＲＩＰＴの切り替え箇所--%>
+            </div>
+            <section class="contents">
+                <asp:ContentPlaceHolder runat="server" ID="cphMainContent" />
+            </section>
+            </div>
+            <br />
+            <div id="footer" class="footer">
+                <br />
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <span class="float-left">
+                                <asp:Button ID="btnLeft1" runat="server" Text="btnLeft1" Visible="False" />
+                                &nbsp;<asp:Button ID="btnLeft2" runat="server" Text="btnLeft2" Visible="False" />
+                                &nbsp;<asp:Button ID="btnLeft3" runat="server" Text="btnLeft3" Visible="False" />
+                                &nbsp;<asp:Button ID="btnLeft4" runat="server" Text="btnLeft4" Visible="False" />
+                                &nbsp;<asp:Button ID="btnLeft5" runat="server" Text="btnLeft5" Visible="False" />
+                                &nbsp;<asp:Button ID="btnLeft6" runat="server" Text="btnLeft6" Visible="False" />
+                                &nbsp;<asp:Button ID="btnLeft7" runat="server" Text="btnLeft7" Visible="False" />
+                                &nbsp;<asp:Button ID="btnLeft8" runat="server" Text="btnLeft8" Visible="False" />
+                                &nbsp;<asp:Button ID="btnLeft9" runat="server" Text="btnLeft9" Visible="False" />
+                                &nbsp;<asp:Button ID="btnLeft10" runat="server" Text="btnLeft10" Visible="False" />
+                            </span>
+                            <span class="float-right">
+                                <asp:Button ID="btnRigth10" runat="server" Text="btnRigth10" Visible="False" />
+                                &nbsp;<asp:Button ID="btnRigth9" runat="server" Text="btnRigth9" Visible="False" />
+                                &nbsp;<asp:Button ID="btnRigth8" runat="server" Text="btnRigth8" Visible="False" />
+                                &nbsp;<asp:Button ID="btnRigth7" runat="server" Text="btnRigth7" Visible="False" />
+                                &nbsp;<asp:Button ID="btnRigth6" runat="server" Text="btnRigth6" Visible="False" />
+                                &nbsp;<asp:Button ID="btnRigth5" runat="server" Text="btnRigth5" Visible="False" />
+                                &nbsp;<asp:Button ID="btnRigth4" runat="server" Text="btnRigth4" Visible="False" />
+                                &nbsp;<asp:Button ID="btnRigth3" runat="server" Text="btnRigth3" Visible="False" />
+                                &nbsp;<asp:Button ID="btnRigth2" runat="server" Text="btnRigth2" Visible="False" />
+                                &nbsp;<asp:Button ID="btnRigth1" runat="server" Text="btnRigth1" Visible="False" />
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <div>
+                </div>
+            </div>
+            <div>
+                <asp:HiddenField ID="hddExclusiveDate" runat="server" />
+                <asp:HiddenField ID="hddExclusiveDate_dtl" runat="server" />
+                <asp:HiddenField ID="hddTERMS" runat="server" />
+                <br />
+            </div>
+        </form>
+    </body>
+</html>

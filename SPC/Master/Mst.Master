@@ -1,0 +1,211 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Mst.Master.vb" Inherits="SPC.MstMaster" %>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head runat="server">
+
+<meta http-equiv="X-UA-Compatible" content="IE=8;IE=9;IE=10"/>
+    <%--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />--%>
+    <title></title>
+    <link href="~/Images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Master/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <script src="/Scripts/fixed.js" type="text/javascript"></script>
+    <script src="/Scripts/isDate.js" type="text/javascript"></script>
+    <script src="/Scripts/fixed.js" type="text/javascript"></script>
+    <script src="/Scripts/windowOpen.js" type="text/javascript"></script>
+    <script src="/Scripts/windowClose.js" type="text/javascript"></script>
+    <script src="/Scripts/closeCheck.js" type="text/javascript"></script>
+    <script src="/Scripts/onEnter.js" type="text/javascript"></script>
+    <script src="/Scripts/PopupJ.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <form runat="server">
+
+    <DIV id ="header" class="header">
+       <div>  
+            <asp:Label ID="Label1" runat="server" Text="サポートセンタシステム" Font-Size="23px"></asp:Label>
+        </div>
+        <hr />
+        <div style="float:right;">
+            <asp:LoginName ID="lnmLoginNm" runat="server" FormatString="【{0}】" />
+            <span class="site-logout">
+                <asp:LinkButton ID="lkbLogout" runat="server">[閉じる]</asp:LinkButton>
+            </span>                
+        </div>
+
+        <div>
+            <div>
+                <asp:Label ID="lblProgramID" runat="server" Text="≪プログラムID≫"></asp:Label>
+                <asp:Label ID="lblBCList" runat="server"></asp:Label>
+            </div>
+        </div>
+       
+        <div style="text-align:center;">
+            <span　 style="text-align:center;">
+            <br />
+            <asp:Label ID="lblTitle" runat="server" Text="画面名称" Font-Size="23px"></asp:Label>
+            </span>
+        </div>
+
+    </DIV>
+    
+       
+    <DIV id="body" style="border-width:thin;padding-top:110px;padding-bottom:64px;">
+
+      <table style="width:100%;">
+          <tr>
+              <td>
+                  <div ID="divCount" runat="server" style="float:right;">
+                      <table style="width:100%;">
+                          <tr>
+                              <td>
+                                  <asp:Label ID="Label4" runat="server" Text="該当件数："></asp:Label>
+                              </td>
+                              <td style="width:100px;">
+                                  <div style="float:right;">
+                                      <asp:Label ID="lblcount" runat="server" Text="XXXXX"></asp:Label>
+                                  </div>
+                              </td>
+                              <td style="width:50px;">
+                                  <asp:Label ID="Label6" runat="server" Text="件"></asp:Label>
+                              </td>
+                          </tr>
+                      </table>
+                  </div>
+                  <div>
+                      <ajaxToolkit:ToolkitScriptManager ID="tsmManager" runat="server" EnableScriptGlobalization="True">
+                          <Scripts>
+                              <asp:ScriptReference Path="../Scripts/isDate.js" />
+                              <asp:ScriptReference Path="../Scripts/fixed.js" />
+                              <asp:ScriptReference Path="../Scripts/windowOpen.js" />
+                              <asp:ScriptReference Path="../Scripts/windowClose.js" />
+                              <asp:ScriptReference Path="../Scripts/closeCheck.js" />
+                              <asp:ScriptReference Path="../Scripts/onEnter.js" />
+                              <asp:ScriptReference Path="../Scripts/PopupJ.js" />
+                          </Scripts>
+                      </ajaxToolkit:ToolkitScriptManager>
+<%--                      <script src='<%= Me.ResolveClientUrl("../Scripts/popup.vbs")%>' type="text/VBScript"></script>--%>
+                      <script src='<%= Me.ResolveClientUrl("../Scripts/PopupJ.js")%>' type="text/VBScript"></script>
+                  </div>
+                  
+                  <br />
+              </td>
+          </tr>
+      </table>
+        
+        <div>
+            <asp:UpdatePanel ID="UpdPanelSearch" runat="server" UpdateMode="Conditional">
+                <ContentTemplate>
+                    <asp:ContentPlaceHolder runat="server" ID="SearchContent" ></asp:ContentPlaceHolder>
+
+                    <div style="float:right; padding-right:10px">
+                        <asp:Label ID="lblsDel" runat="server" Visible="False"></asp:Label>
+                        <asp:CheckBox ID="chksDEL" runat="server" Visible="False" Text="削除データ含む" />
+                        &nbsp;
+                        <asp:Button ID="btnSrcClear" runat="server" Text="検索条件クリア" ValidationGroup="ss" />
+                        <asp:Button ID="btnSarch" runat="server" Text="検索" ValidationGroup="search" />
+                    </div>
+
+                    <div style="float:left; text-align:left;">
+                        <asp:ValidationSummary ID="ValidSumSearch" runat="server" CssClass="errortext" ValidationGroup="search" />
+                    </div>
+                </ContentTemplate>
+                <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID="btnSrcClear" EventName="Click" />
+                    <asp:PostBackTrigger ControlID="btnSarch" />
+                </Triggers>
+            </asp:UpdatePanel>
+            <br style="clear:both;" />
+        </div>
+
+        <asp:UpdatePanel ID="UpdPanelMain" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                <div style="float: left; text-align: left; clear: both;">
+                    <asp:ValidationSummary ID="ValidSumKey" runat="server" CssClass="errortext" ValidationGroup="key" />
+                    <asp:ValidationSummary ID="ValidSumMain" runat="server" CssClass="errortext" ValidationGroup="val" />
+                </div>
+                <br style="clear: both;" />
+                <div style="width: 99%; margin: 0px 0.5% 0 0.5%; padding-top: 10px; padding-bottom: 10px; border: 1px solid;">
+                    <asp:Panel ID="pnlMain" runat="server">
+                        <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                    </asp:Panel>
+                    <div style="text-align: right; margin-top: 5px; padding-right: 10px;">
+                        <asp:Button ID="btnDmy" runat="server" CommandName="DUMMY" Text="" Visible="False" />
+                        <asp:Button ID="btnGeneral" runat="server" CommandName="GENERAL" Text="汎用" Visible="False" />
+                        <asp:Button ID="btnClear" runat="server" CommandName="CLEAR" Text="クリア" />
+                        <asp:Button ID="btnInsert" runat="server" CommandName="INSERT" Text="登録" ValidationGroup="val" />
+                        <asp:Button ID="btnUpdate" runat="server" CommandName="UPDATE" Text="更新" ValidationGroup="val" />
+                        <asp:Button ID="btnDelete" runat="server" CommandName="DELETE" Text="削除" />
+                    </div>
+                </div>
+                <asp:HiddenField ID="hddExclusiveDate" runat="server" />
+                <asp:HiddenField ID="hddExclusiveDate_dtl" runat="server" />
+
+            </ContentTemplate>
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="btnClear" EventName="Click" />
+                <asp:PostBackTrigger ControlID="btnGeneral" />
+                <asp:PostBackTrigger ControlID="btnInsert" />
+                <asp:PostBackTrigger ControlID="btnUpdate" />
+                <asp:PostBackTrigger ControlID="btnDelete" />
+            </Triggers>
+        </asp:UpdatePanel>
+
+        <div style="margin-top:20px;">
+            <asp:ContentPlaceHolder runat="server" ID="GridContent" />
+        </div>
+
+    </DIV>
+  
+                  
+    <div id="footer" class="footer">
+        <br />
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <span class="float-left">
+                        <asp:Button ID="btnLeft1" runat="server" Text="btnLeft1" Visible="False" />
+                        &nbsp;<asp:Button ID="btnLeft2" runat="server" Text="btnLeft2" Visible="False" />
+                        &nbsp;<asp:Button ID="btnLeft3" runat="server" Text="btnLeft3" Visible="False" />
+                        &nbsp;<asp:Button ID="btnLeft4" runat="server" Text="btnLeft4" Visible="False" />
+                        &nbsp;<asp:Button ID="btnLeft5" runat="server" Text="btnLeft5" Visible="False" />
+                        &nbsp;<asp:Button ID="btnLeft6" runat="server" Text="btnLeft6" Visible="False" />
+                        &nbsp;<asp:Button ID="btnLeft7" runat="server" Text="btnLeft7" Visible="False" />
+                        &nbsp;<asp:Button ID="btnLeft8" runat="server" Text="btnLeft8" Visible="False" />
+                        &nbsp;<asp:Button ID="btnLeft9" runat="server" Text="btnLeft9" Visible="False" />
+                        &nbsp;<asp:Button ID="btnLeft10" runat="server" Text="btnLeft10" Visible="False" />
+    
+                    </span>
+                    <span class="float-right">
+                        <asp:Button ID="btnRigth10" runat="server" Text="btnRigth10" Visible="False" />
+                        &nbsp;<asp:Button ID="btnRigth9" runat="server" Text="btnRigth9" Visible="False" />
+                        &nbsp;<asp:Button ID="btnRigth8" runat="server" Text="btnRigth8" Visible="False" />
+                        &nbsp;<asp:Button ID="btnRigth7" runat="server" Text="btnRigth7" Visible="False" />
+                        &nbsp;<asp:Button ID="btnRigth6" runat="server" Text="btnRigth6" Visible="False" />
+                        &nbsp;<asp:Button ID="btnRigth5" runat="server" Text="btnRigth5" Visible="False" />
+                        &nbsp;<asp:Button ID="btnRigth4" runat="server" Text="btnRigth4" Visible="False" />
+                        &nbsp;<asp:Button ID="btnRigth3" runat="server" Text="btnRigth3" Visible="False" />
+                        &nbsp;<asp:Button ID="btnRigth2" runat="server" Text="btnRigth2" Visible="False" />
+                        &nbsp;<asp:Button ID="btnRigth1" runat="server" Text="btnRigth1" Visible="False" />
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <hr />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <div>
+        </div>
+    </div>
+
+
+    </form>
+</body>
+</html>

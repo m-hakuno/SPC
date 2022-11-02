@@ -1,0 +1,27 @@
+{
+    "name": "hello",
+    "description": "Base Level Extension",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "nativeMessaging",
+        "tabs"
+    ],
+    "action": {
+        "default_popup": "hello.html",
+        "default_icon": "hello_extensions.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*",
+                "http://*/*"
+            ],
+            "js": [ "content.js" ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "manifest_version": 3
+}

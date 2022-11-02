@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Row>
+		<FieldType>Bound</FieldType>
+		<HeaderText>対応コード</HeaderText>
+		<Width>120</Width>
+		<HorizontalAlign>Left</HorizontalAlign>
+		<DataField>対応コード</DataField>
+		<ReadOnly>1</ReadOnly>
+		<Visible>1</Visible>
+	</Row>
+	<Row>
+		<FieldType>Bound</FieldType>
+		<HeaderText>対応日時</HeaderText>
+		<Width>150</Width>
+		<HorizontalAlign>Center</HorizontalAlign>
+		<DataField>対応日時</DataField>
+		<ReadOnly>1</ReadOnly>
+		<Visible>1</Visible>
+	</Row>
+	<Row>
+		<FieldType>Bound</FieldType>
+		<HeaderText>対応内容</HeaderText>
+		<Width>753</Width>
+		<HorizontalAlign>Left</HorizontalAlign>
+		<DataField>対応内容</DataField>
+		<ReadOnly>1</ReadOnly>
+		<Visible>1</Visible>
+	</Row>
+</Root>

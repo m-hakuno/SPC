@@ -1,0 +1,162 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="SPC.sitemaster05" %>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head runat="server">
+
+<meta http-equiv="X-UA-Compatible" content="IE=8;IE=9;IE=10"/>
+    <%--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />--%>
+    <title></title>
+    <link href="~/Images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Master/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <script src="/Scripts/fixed.js" type="text/javascript"></script>
+    <script src="/Scripts/isDate.js" type="text/javascript"></script>
+    <script src="/Scripts/fixed.js" type="text/javascript"></script>
+    <script src="/Scripts/windowOpen.js" type="text/javascript"></script>
+    <script src="/Scripts/windowClose.js" type="text/javascript"></script>
+    <script src="/Scripts/closeCheck.js" type="text/javascript"></script>
+    <script src="/Scripts/onEnter.js" type="text/javascript"></script>
+    <script src="/Scripts/PopupJ.js" type="text/javascript"></script>
+</head>
+<body>
+    <form runat="server">
+    <DIV id ="header" style="border-width:thin; border-bottom-style: ridge; width:100%; position:fixed ; z-index: 1; height:110px;background-color: #CCCCCC;">
+       <div>  
+            <asp:Label ID="Label1" runat="server" Text="サポートセンタシステム" Font-Size="23px"></asp:Label>
+        </div>
+        <hr />
+
+                <div style="float:right;">
+                <asp:LoginName ID="lnmLoginNm" runat="server" FormatString="【{0}】" />
+                    <span class="site-logout">
+                        <asp:LinkButton ID="lkbLogout" runat="server">[閉じる]</asp:LinkButton>
+                    </span>
+                
+            </div>
+
+        <div>
+            <div>
+            <asp:Label ID="lblProgramID" runat="server" Text="≪プログラムID≫"></asp:Label>
+                <asp:Label ID="lblBCList" runat="server"></asp:Label>
+            </div>
+        </div>
+       
+        <div style="text-align:center;">
+            <span　 style="text-align:center;">
+            <br />
+            <asp:Label ID="lblTitle" runat="server" Text="画面名称" Font-Size="23px"></asp:Label>
+            </span>
+        </div>
+
+    </DIV>
+    
+       
+    <DIV id="body" style="border-width:thin; border-bottom-style: ridge; padding-top:110px; padding-bottom:64px;">
+
+      <table style="width:100%;">
+          <tr>
+              <td>
+<div style="float:right;">
+ 
+                <table>
+                <tr>
+                    <td>
+                        <asp:Label ID="Label4" runat="server" Text="該当件数："></asp:Label>
+                    </td>
+                    <td style="width:100px;">
+                        <div style="float:right;">
+                            <asp:Label ID="lblcount" runat="server" Text="XXXXX"></asp:Label>
+                        </div>
+                    </td>
+                    <td style="width:50px;">
+                        <asp:Label ID="Label6" runat="server" Text="件"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+            </div>
+<div>
+                <ajaxToolkit:ToolkitScriptManager ID="tsmManager" runat="server" EnableScriptGlobalization="True">
+                    <Scripts>
+                        <asp:ScriptReference Path="../Scripts/isDate.js" />
+                        <asp:ScriptReference Path="../Scripts/fixed.js" />
+                        <asp:ScriptReference Path="../Scripts/windowOpen.js" />
+                        <asp:ScriptReference Path="../Scripts/windowClose.js" />
+                        <asp:ScriptReference Path="../Scripts/closeCheck.js" />
+                        <asp:ScriptReference Path="../Scripts/onEnter.js" />
+                    </Scripts>
+                </ajaxToolkit:ToolkitScriptManager>
+<%--                <script src='<%= Me.ResolveClientUrl("../Scripts/popup.vbs")%>' type="text/VBScript"></script>--%>
+                <script src='<%= Me.ResolveClientUrl("../Scripts/PopupJ.js")%>' type="text/VBScript"></script>
+             </div>
+
+            <br />
+
+           
+
+              </td>
+          </tr>
+      </table>  
+            
+            
+
+        
+            <asp:ContentPlaceHolder runat="server" ID="SearchContent" />
+        
+        
+            <div>
+
+ 
+     
+            <table style="width:100%;">
+         
+                <tr>
+                    <td>          
+                    
+                        <div style="float:left; text-align:left;"> 
+                             <asp:ValidationSummary ID="ValidSum" runat="server" CssClass="errortext" ValidationGroup="val" />
+                        </div>
+   
+                 
+                        <div style="float:right;"> 
+                            <asp:Button ID="btnSrcClear" runat="server" Text="検索条件クリア" ValidationGroup="ss" />
+                            <asp:Button ID="btnSarch" runat="server" Text="検索" ValidationGroup="s" />
+                                              &nbsp; 
+                        </div>    
+
+                    </td>
+                </tr>
+            </table>
+
+
+     
+      
+ </div>
+
+                             
+            <div>   
+
+       <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+
+       
+    </div>
+
+        
+    </DIV>
+  
+                  
+    <DIV id="footer" style="position:relative; border-width:thin; border-top-style: ridge; bottom:0px; height:64px; width:100%; background-color: #CCCCCC; z-index:1;">
+       <hr/>
+        <br />
+    </DIV>
+
+         <div>
+            <asp:HiddenField ID="hddExclusiveDate" runat="server" />
+            <asp:HiddenField ID="hddExclusiveDate_dtl" runat="server" />
+        </div>
+
+    </form>
+</body>
+</html>

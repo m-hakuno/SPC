@@ -1,0 +1,3124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{F8D3BACB-EB09-485E-8727-497D49329A2C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SPC</RootNamespace>
+    <AssemblyName>SPC</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SPC.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SPC.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.7.1005\lib\45\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.2.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.2\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.12.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.12.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gcef.Data.DataEngine, Version=3.1.0.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gcef.Data.DataEngine.3.1.0\lib\net40\Gcef.Data.DataEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gcef.Data.ExpressionInfo, Version=3.1.0.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gcef.Data.ExpressionInfo.3.1.0\lib\net40\Gcef.Data.ExpressionInfo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gcef.Data.VBFunctionLib, Version=3.1.0.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gcef.Data.VBFunctionLib.3.1.0\lib\net40\Gcef.Data.VBFunctionLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET16\Tools\GrapeCity.ActiveReports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Chart.Win, Version=16.0.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET16\Tools\GrapeCity.ActiveReports.Chart.Win.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.DataProviders, Version=2.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.DataProviders.2.1.0\lib\net462\GrapeCity.ActiveReports.Core.DataProviders.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Document, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Document.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Document.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Document.Drawing.Gc, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Document.Drawing.Gc.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Document.Drawing.Gc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Document.Drawing.Gdi, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Document.Drawing.Gdi.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Document.Drawing.Gdi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gc, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Drawing.Gc.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Drawing.Gc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Drawing.Gdi.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Excel.Page, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Excel.Page.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Html.Page, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Html.Page.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Html.Page.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Image.Page, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Image.Page.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Image.Page.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Pdf.Page, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Pdf.Page.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Pdf.Section, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Pdf.Section.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Pdf.Section.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Svg.Page, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Svg.Page.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Svg.Page.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Text.Page, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Text.Page.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Text.Page.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Word.Page, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Word.Page.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Word.Page.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rdl, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rdl.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Rdl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rendering, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rendering.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Scripting, Version=3.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Scripting.3.1.0\lib\net462\GrapeCity.ActiveReports.Core.Scripting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Svg, Version=1.0.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Svg.1.0.1\lib\net462\GrapeCity.ActiveReports.Core.Svg.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Design.Win, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET16\Tools\GrapeCity.ActiveReports.Design.Win.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Document, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET16\Tools\GrapeCity.ActiveReports.Document.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Excel, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Excel.ja.16.0.0\lib\net462\GrapeCity.ActiveReports.Export.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Html, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Html.ja.16.0.0\lib\net462\GrapeCity.ActiveReports.Export.Html.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Image, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Image.ja.16.0.0\lib\net462\GrapeCity.ActiveReports.Export.Image.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Pdf, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Pdf.ja.16.0.0\lib\net462\GrapeCity.ActiveReports.Export.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Word, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Word.ja.16.0.0\lib\net462\GrapeCity.ActiveReports.Export.Word.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Xml, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Xml.ja.16.0.0\lib\net462\GrapeCity.ActiveReports.Export.Xml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.SpreadBuilder, Version=1.0.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.SpreadBuilder.1.0.1\lib\net462\GrapeCity.ActiveReports.SpreadBuilder.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Common, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET16\Tools\GrapeCity.ActiveReports.Viewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Win, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET16\Tools\GrapeCity.ActiveReports.Viewer.Win.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Web, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Web.ja.16.0.0\lib\net462\GrapeCity.ActiveReports.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Web.Viewer, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Web.Viewer.ja.16.0.0\lib\net462\GrapeCity.ActiveReports.Web.Viewer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Win, Version=16.0.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET16\Tools\GrapeCity.ActiveReports.Win.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.DataVisualization.Chart, Version=0.4.66.0, Culture=neutral, PublicKeyToken=8dbeb54e07a9de91, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.DataVisualization.Chart.0.4.66\lib\net461\GrapeCity.DataVisualization.Chart.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.DX.Windows, Version=5.0.0.774, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.Documents.DX.Windows.5.0.0.774\lib\net461\GrapeCity.Documents.DX.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Imaging, Version=5.0.0.774, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.Documents.Imaging.5.0.0.774\lib\net461\GrapeCity.Documents.Imaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Imaging.Windows, Version=5.0.0.774, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.Documents.Imaging.Windows.5.0.0.774\lib\net461\GrapeCity.Documents.Imaging.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Pdf, Version=5.0.0.774, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.Documents.Pdf.5.0.0.774\lib\net461\GrapeCity.Documents.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.2\lib\net461\System.Text.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="DBFTP" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\COMLGIP001\COMLGIP001.aspx" />
+    <Content Include="Common\COMLGIP001\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Common\COMLSTP001\COMLSTP001.aspx" />
+    <Content Include="Common\COMLSTP002\COMLSTP002.aspx" />
+    <Content Include="Common\COMLSTP099\COMLSTP099.ashx" />
+    <Content Include="Common\COMLSTP099\COMLSTP099.aspx" />
+    <Content Include="Common\COMMENP001\COMMENP001.aspx" />
+    <Content Include="Common\COMMENP002\COMMENP002.aspx" />
+    <Content Include="Common\COMMENP003\COMMENP003.aspx" />
+    <Content Include="Common\COMMENP004\COMMENP004.aspx" />
+    <Content Include="Common\COMMENP005\COMMENP005.aspx" />
+    <Content Include="Common\COMMENP006\COMMENP006.aspx" />
+    <Content Include="Common\COMMENP007\COMMENP007.aspx" />
+    <Content Include="Common\COMMENP008\COMMENP008.aspx" />
+    <Content Include="Common\COMMENP009\COMMENP009.aspx" />
+    <Content Include="Common\COMMENP010\COMMENP010.aspx" />
+    <Content Include="Common\COMPRVP001\COMPRVP001.aspx" />
+    <Content Include="Common\COMSELP001\COMSELP001.aspx" />
+    <Content Include="Common\COMSELP002\COMSELP002.aspx" />
+    <Content Include="Common\COMSELP004\COMSELP004.aspx" />
+    <Content Include="Common\COMSELP005\COMSELP005.aspx" />
+    <Content Include="Common\DLCINPP001\DLCINPP001.aspx" />
+    <Content Include="Common\DLCINPP002\DLCINPP002.aspx" />
+    <Content Include="Construction\CNSINQP001\CNSINQP001.aspx" />
+    <Content Include="Construction\CNSLSTP001\CNSLSTP001.aspx" />
+    <Content Include="Construction\CNSLSTP002\CNSLSTP002.aspx" />
+    <Content Include="Construction\CNSLSTP004\CNSLSTP004.aspx" />
+    <Content Include="Construction\CNSLSTP005\CNSLSTP005.aspx" />
+    <Content Include="Construction\CNSLSTP006\CNSLSTP006.aspx" />
+    <Content Include="Construction\CNSLSTP007\CNSLSTP007.aspx" />
+    <Content Include="Construction\CNSOUTP001\CNSOUTP001.aspx" />
+    <Content Include="Construction\CNSUPDP001\CNSUPDP001.aspx" />
+    <Content Include="Construction\CNSUPDP002\CNSUPDP002.aspx" />
+    <Content Include="Construction\CNSUPDP003\CNSUPDP003.aspx" />
+    <Content Include="Construction\CNSUPDP004\CNSUPDP004.aspx" />
+    <Content Include="Construction\CNSUPDP005\CNSUPDP005.aspx" />
+    <Content Include="Construction\CNSUPDP006\CNSUPDP006.aspx" />
+    <Content Include="Construction\DLLSELP001\DLLSELP001.aspx" />
+    <Content Include="Construction\MSTLSTP001\MSTLSTP001.aspx" />
+    <Content Include="Construction\SERLSTP001\SERLSTP001.aspx" />
+    <Content Include="Construction\SERUPDP001\SERUPDP001.aspx" />
+    <Content Include="Content\Site.css" />
+    <Content Include="customError.html" />
+    <Content Include="customSessionTimeOut.html" />
+    <Content Include="customSessionTimeOutMain.html" />
+    <Content Include="EdgeExpansion\app\background.js" />
+    <Content Include="EdgeExpansion\app\content.js" />
+    <Content Include="EdgeExpansion\app\hello.html" />
+    <Content Include="EdgeExpansion\app\hello_extensions.png" />
+    <Content Include="EdgeExpansion\host\Newtonsoft.Json.dll" />
+    <Content Include="ExculsiveList.aspx" />
+    <Content Include="Exculsive_del.aspx" />
+    <Content Include="FaultReception\BRKINQP001\BRKINQP001.aspx" />
+    <Content Include="FaultReception\BRKLSTP001\BRKLSTP001.aspx" />
+    <Content Include="FaultReception\BRKUPDP001\BRKUPDP001.aspx" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\アイコン（カレンダー）.png" />
+    <Content Include="Maintenance\BPIFIXP001\BPIFIXP001.aspx" />
+    <Content Include="Maintenance\BPIINQP001\BPIINQP001.aspx" />
+    <Content Include="Maintenance\BPILSTP001\BPILSTP001.aspx" />
+    <Content Include="Maintenance\CMPINQP001\CMPINQP001.aspx" />
+    <Content Include="Maintenance\CMPINQP002\CMPINQP002.aspx" />
+    <Content Include="Maintenance\CMPLSTP001\CMPLSTP001.aspx" />
+    <Content Include="Maintenance\CMPLSTP002\CMPLSTP002.aspx" />
+    <Content Include="Maintenance\CMPLSTP003\CMPLSTP003.aspx" />
+    <Content Include="Maintenance\CMPOUTP001\CMPOUTP001.aspx" />
+    <Content Include="Maintenance\CMPSELP001\CMPSELP001.aspx" />
+    <Content Include="Maintenance\CMPSELP002\CMPSELP002.aspx" />
+    <Content Include="Maintenance\CMPUPDP001\CMPUPDP001.aspx" />
+    <Content Include="Maintenance\CMPUPDP002\CMPUPDP002.aspx" />
+    <Content Include="Maintenance\CTISELP005\CTISELP005.aspx" />
+    <Content Include="Maintenance\CTISELP019\CTISELP019.aspx" />
+    <Content Include="Maintenance\EQULSTP001\EQULSTP001.aspx" />
+    <Content Include="Maintenance\EQULSTP003\EQULSTP003.aspx" />
+    <Content Include="Maintenance\QUAOUTP001\QUAOUTP001.aspx" />
+    <Content Include="Maintenance\QUAUPDP001\QUAUPDP001.aspx" />
+    <Content Include="Maintenance\QUAUPDP002\QUAUPDP002.aspx" />
+    <Content Include="Maintenance\REQINQP001\REQINQP001.aspx" />
+    <Content Include="Maintenance\REQLSTP001\REQLSTP001.aspx" />
+    <Content Include="Maintenance\REQLSTP002\REQLSTP002.aspx" />
+    <Content Include="Maintenance\REQSELP001\REQSELP001.aspx" />
+    <Content Include="Master\AutoComplete.asmx" />
+    <Content Include="Master\COMUPDM01\COMUPDM01.aspx" />
+    <Content Include="Master\COMUPDM02\COMUPDM02.aspx" />
+    <Content Include="Master\COMUPDM03\COMUPDM03.aspx" />
+    <Content Include="Master\COMUPDM06\COMUPDM06.aspx" />
+    <Content Include="Master\COMUPDM07\COMUPDM07.aspx" />
+    <Content Include="Master\COMUPDM19\COMUPDM19.aspx" />
+    <Content Include="Master\COMUPDM23\COMUPDM23.aspx" />
+    <Content Include="Master\COMUPDM31\COMUPDM31.aspx" />
+    <Content Include="Master\COMUPDM32\COMUPDM32.aspx" />
+    <Content Include="Master\COMUPDM36\COMUPDM36.aspx" />
+    <Content Include="Master\COMUPDM37\COMUPDM37.aspx" />
+    <Content Include="Master\COMUPDM38\COMUPDM38.aspx" />
+    <Content Include="Master\COMUPDM40\COMUPDM40.aspx" />
+    <Content Include="Master\COMUPDM41\COMUPDM41.aspx" />
+    <Content Include="Master\COMUPDM44\COMUPDM44.aspx" />
+    <Content Include="Master\COMUPDM45\COMUPDM45.aspx" />
+    <Content Include="Master\COMUPDM47\COMUPDM47.aspx" />
+    <Content Include="Master\COMUPDM48\COMUPDM48.aspx" />
+    <Content Include="Master\COMUPDM53\COMUPDM53.aspx" />
+    <Content Include="Master\COMUPDM54\COMUPDM54.aspx" />
+    <Content Include="Master\COMUPDM55\COMUPDM55.aspx" />
+    <Content Include="Master\COMUPDM66\COMUPDM66.aspx" />
+    <Content Include="Master\COMUPDM68\COMUPDM68.aspx" />
+    <Content Include="Master\COMUPDM69\COMUPDM69.aspx" />
+    <Content Include="Master\COMUPDM70\COMUPDM70.aspx" />
+    <Content Include="Master\COMUPDM71\COMUPDM71.aspx" />
+    <Content Include="Master\COMUPDM73\COMUPDM73.aspx" />
+    <Content Include="Master\COMUPDM75\COMUPDM75.aspx" />
+    <Content Include="Master\COMUPDM77\COMUPDM77.aspx" />
+    <Content Include="Master\COMUPDM80\COMUPDM80.aspx" />
+    <Content Include="Master\COMUPDM85\COMUPDM85.aspx" />
+    <Content Include="Master\COMUPDM87\COMUPDM87.aspx" />
+    <Content Include="Master\COMUPDM89\COMUPDM89.aspx" />
+    <Content Include="Master\COMUPDM90\COMUPDM90.aspx" />
+    <Content Include="Master\COMUPDM92\COMUPDM92.aspx" />
+    <Content Include="Master\COMUPDM95\COMUPDM95.aspx" />
+    <Content Include="Master\COMUPDM96\COMUPDM96.aspx" />
+    <Content Include="Master\COMUPDM97\COMUPDM97.aspx" />
+    <Content Include="Master\COMUPDMA0\COMUPDMA0.aspx" />
+    <Content Include="Master\COMUPDMA1\COMUPDMA1.aspx" />
+    <Content Include="Master\COMUPDMA7\COMUPDMA7.aspx" />
+    <Content Include="Master\COMUPDMA8\COMUPDMA8.aspx" />
+    <Content Include="Master\COMUPDMB1\COMUPDMB1.aspx" />
+    <Content Include="Master\COMUPDMB2\COMUPDMB2.aspx" />
+    <Content Include="Master\MasterMenu\ComMstMenu.aspx" />
+    <Content Include="Master\Site.css" />
+    <Content Include="RepairEequipment\MNTOUTP001\MNTOUTP001.aspx" />
+    <Content Include="RepairEequipment\MNTSELP001\MNTSELP001.aspx" />
+    <Content Include="RepairEequipment\MNTUPDP001\MNTUPDP001.aspx" />
+    <Content Include="RepairEequipment\REPLSTP001\REPLSTP001.aspx" />
+    <Content Include="RepairEequipment\REPUPDP001\REPUPDP001.aspx" />
+    <Content Include="RepairEequipment\REPUPDP002\REPUPDP002.aspx" />
+    <Content Include="Schedule\SCLINPP001\SCLINPP001.aspx" />
+    <Content Include="Schedule\SCLLSTP001\SCLLSTP001.aspx" />
+    <Content Include="Schedule\SCLMENP001\SCLMENP001.aspx" />
+    <Content Include="Schedule\SCLUPDP001\SCLUPDP001.aspx" />
+    <Content Include="Scripts\closeCheck.js" />
+    <Content Include="Scripts\ctiexe.js" />
+    <Content Include="Scripts\ctiexeNew.js" />
+    <Content Include="Scripts\dataClassChange.js" />
+    <Content Include="Scripts\EnableChange.js" />
+    <Content Include="Scripts\fixed.js" />
+    <Content Include="Scripts\Functionkeydown.js" />
+    <Content Include="Scripts\isDate.js" />
+    <Content Include="Scripts\onEnter.js" />
+    <Content Include="Scripts\popup.vbs" />
+    <Content Include="Scripts\PopupJ.js" />
+    <Content Include="Scripts\setCheck.js" />
+    <Content Include="Scripts\tableCalculation.js" />
+    <Content Include="Scripts\windowClose.js" />
+    <Content Include="Scripts\windowOpen.js" />
+    <Content Include="SupportCenter\BBPLSTP001\BBPLSTP001.aspx" />
+    <Content Include="SupportCenter\BBPUPDP001\BBPUPDP001.aspx" />
+    <Content Include="SupportCenter\CDPLSTP001\CDPLSTP001.aspx" />
+    <Content Include="SupportCenter\DOCMENP001\DOCMENP001.aspx" />
+    <Content Include="SupportCenter\DOCUPDP001\DOCUPDP001.aspx" />
+    <Content Include="SupportCenter\TBPINPP001\TBPINPP001.aspx" />
+    <Content Include="SystemMaintenance\SMTDEN001\SMTDEN001.asmx" />
+    <Content Include="SystemMaintenance\SMTDLE001\SMTDLE001.asmx" />
+    <Content Include="SystemMaintenance\SMTDSY001\SMTDSY001.asmx" />
+    <Content Include="SystemMaintenance\SMTSKF001\SMTSKF001.asmx" />
+    <Content Include="SystemMaintenance\SMTSSF001\SMTSSF001.asmx" />
+    <Content Include="Test\TESTMENU\TESTMENU.aspx" />
+    <Content Include="UserControl\ClsCMDateBox.ascx" />
+    <Content Include="UserControl\ClsCMDateBoxFromTo.ascx" />
+    <Content Include="UserControl\ClsCMDateTimeBox.ascx" />
+    <Content Include="UserControl\ClsCMDropDownList.ascx" />
+    <Content Include="UserControl\ClsCMDropDownList_Mastr.ascx" />
+    <Content Include="UserControl\ClsCMpnlPopup.ascx" />
+    <Content Include="UserControl\ClsCMTextBox.ascx" />
+    <Content Include="UserControl\ClsCMTextBoxFromTo.ascx" />
+    <Content Include="UserControl\ClsCMTextBoxPopup.ascx" />
+    <Content Include="UserControl\ClsCMTextBoxRef.ascx" />
+    <Content Include="UserControl\ClsCMTextBoxTwo.ascx" />
+    <Content Include="UserControl\ClsCMTextBoxTwoFromTo.ascx" />
+    <Content Include="UserControl\ClsCMTimeBox.ascx" />
+    <Content Include="UserControl\ClsCMTimeBoxFromTo.ascx" />
+    <Content Include="Watch\DLCLSTP001\DLCLSTP001.aspx" />
+    <Content Include="Watch\DLLHSTP001\DLLHSTP001.aspx" />
+    <Content Include="Watch\DSULSTP001\DSULSTP001.aspx" />
+    <Content Include="Watch\DSUUPDP001\DSUUPDP001.aspx" />
+    <Content Include="Watch\ERRLSTP001\ERRLSTP001.aspx" />
+    <Content Include="Watch\ERRSELP001\ERRSELP001.aspx" />
+    <Content Include="Watch\HEALSTP001\HEALSTP001.aspx" />
+    <Content Include="Watch\HEAUPDP001\HEAUPDP001.aspx" />
+    <Content Include="Watch\ICHLSTP001\ICHLSTP001.aspx" />
+    <Content Include="Watch\ICHLSTP002\ICHLSTP002.aspx" />
+    <Content Include="Watch\OVELSTP001\OVELSTP001.aspx" />
+    <Content Include="Watch\OVELSTP002\OVELSTP002.aspx" />
+    <Content Include="Watch\SLFLSTP001\SLFLSTP001.aspx" />
+    <Content Include="Watch\SLFLSTP002\SLFLSTP002.aspx" />
+    <Content Include="Watch\SLFLSTP003\SLFLSTP003.aspx" />
+    <Content Include="Watch\TJKLSTP001\TJKLSTP001.aspx" />
+    <Content Include="Watch\WATINQP001\WATINQP001.aspx" />
+    <Content Include="Watch\WATLSTP001\WATLSTP001.aspx" />
+    <Content Include="Watch\WATLSTP002\WATLSTP002.aspx" />
+    <Content Include="Watch\WATOUTP001\WATOUTP001.aspx" />
+    <Content Include="Watch\WATOUTP002\WATOUTP002.aspx" />
+    <Content Include="Watch\WATOUTP026\WATOUTP026.aspx" />
+    <Content Include="Watch\WATOUTP027\WATOUTP027.aspx" />
+    <Content Include="Watch\WATUPDP001\WATUPDP001.aspx" />
+    <Content Include="Watch\SLFLSTP004\SLFLSTP004.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\BBPLSTP001.xml" />
+    <Content Include="XML\BPIFIXP001.xml" />
+    <Content Include="XML\BPIFIXP001_Header.xml" />
+    <Content Include="XML\BPIINQP001.xml" />
+    <Content Include="XML\BPILSTP001.xml" />
+    <Content Include="XML\BRKINQP001.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\BRKLSTP001.xml" />
+    <Content Include="XML\BRKLSTP002.xml" />
+    <Content Include="XML\BRKUPDP001_2.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\BRKUPDP001.xml" />
+    <Content Include="XML\CDPLSTP001.xml" />
+    <Content Include="XML\CMPINQP001.xml" />
+    <Content Include="XML\CMPINQP002.xml" />
+    <Content Include="XML\CMPLSTP001.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\CMPLSTP002.xml" />
+    <Content Include="XML\CMPLSTP003.xml" />
+    <Content Include="XML\CMPLSTP003_Header.xml" />
+    <Content Include="XML\CMPSELP001.xml" />
+    <Content Include="XML\CMPSELP001_Header.xml" />
+    <Content Include="XML\CMPSELP002.xml" />
+    <Content Include="XML\CMPUPDP002.xml" />
+    <Content Include="XML\CNSINQP001_1.xml" />
+    <Content Include="XML\CNSINQP001_2.xml" />
+    <Content Include="XML\CNSINQP001_3.xml" />
+    <Content Include="XML\CNSLSTP001.xml" />
+    <Content Include="XML\CNSLSTP001_Header.xml" />
+    <Content Include="XML\CNSLSTP002.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\CNSLSTP004.xml" />
+    <Content Include="XML\CNSLSTP004_Header.xml" />
+    <Content Include="XML\CNSLSTP005.xml" />
+    <Content Include="XML\CNSLSTP005_Header.xml" />
+    <Content Include="XML\CNSLSTP006.xml" />
+    <Content Include="XML\CNSLSTP006_2.xml" />
+    <Content Include="XML\CNSLSTP007.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\CNSOUTP001.xml" />
+    <Content Include="XML\CNSUPDP001.xml" />
+    <Content Include="XML\CNSUPDP001_Header.xml" />
+    <Content Include="XML\CNSUPDP002.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\CNSUPDP003.xml" />
+    <Content Include="XML\CNSUPDP003_Header.xml" />
+    <Content Include="XML\CNSUPDP004_1.xml" />
+    <Content Include="XML\CNSUPDP004_2.xml" />
+    <Content Include="XML\CNSUPDP005.xml" />
+    <Content Include="XML\COMLSTP001.xml" />
+    <Content Include="XML\COMLSTP099.xml" />
+    <Content Include="XML\COMSELP001.xml" />
+    <Content Include="XML\COMSELP002.xml" />
+    <Content Include="XML\COMSELP004.xml" />
+    <Content Include="XML\COMUPDM01.xml" />
+    <Content Include="XML\COMUPDM02.xml" />
+    <Content Include="XML\COMUPDM02_2.xml" />
+    <Content Include="XML\COMUPDM03.xml" />
+    <Content Include="XML\COMUPDM06.xml" />
+    <Content Include="XML\COMUPDM06_Header.xml" />
+    <Content Include="XML\COMUPDM07.xml" />
+    <Content Include="XML\COMUPDM19.xml" />
+    <Content Include="XML\COMUPDM19_SPTEL.xml" />
+    <Content Include="XML\COMUPDM23.xml" />
+    <Content Include="XML\COMUPDM31.xml" />
+    <Content Include="XML\COMUPDM36.xml" />
+    <Content Include="XML\COMUPDM37.xml" />
+    <Content Include="XML\COMUPDM38.xml" />
+    <Content Include="XML\COMUPDM40.xml" />
+    <Content Include="XML\COMUPDM40_Header.xml" />
+    <Content Include="XML\COMUPDM41.xml" />
+    <Content Include="XML\COMUPDM41_Header.xml" />
+    <Content Include="XML\COMUPDM44.xml" />
+    <Content Include="XML\COMUPDM44_Header.xml" />
+    <Content Include="XML\COMUPDM45.xml" />
+    <Content Include="XML\COMUPDM47.xml" />
+    <Content Include="XML\COMUPDM48.xml" />
+    <Content Include="XML\COMUPDM53.xml" />
+    <Content Include="XML\COMUPDM54.xml" />
+    <Content Include="XML\COMUPDM55.xml" />
+    <Content Include="XML\COMUPDM66.xml" />
+    <Content Include="XML\COMUPDM68.xml" />
+    <Content Include="XML\COMUPDM69.xml" />
+    <Content Include="XML\COMUPDM70.xml" />
+    <Content Include="XML\COMUPDM71.xml" />
+    <Content Include="XML\COMUPDM73.xml" />
+    <Content Include="XML\COMUPDM75.xml" />
+    <Content Include="XML\COMUPDM77.xml" />
+    <Content Include="XML\COMUPDM80.xml" />
+    <Content Include="XML\COMUPDM85.xml" />
+    <Content Include="XML\COMUPDM87.xml" />
+    <Content Include="XML\COMUPDM89.xml" />
+    <Content Include="XML\COMUPDM90.xml" />
+    <Content Include="XML\COMUPDM92.xml" />
+    <Content Include="XML\COMUPDM95.xml" />
+    <Content Include="XML\COMUPDM96.xml" />
+    <Content Include="XML\COMUPDM97.xml" />
+    <Content Include="XML\COMUPDMA0.xml" />
+    <Content Include="XML\COMUPDMA1.xml" />
+    <Content Include="XML\COMUPDMA7.xml" />
+    <Content Include="XML\COMUPDMA7_Header.xml" />
+    <Content Include="XML\CTISELP005.xml" />
+    <Content Include="XML\DLCLSTP001.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\DLLHSTP001.xml" />
+    <Content Include="XML\DLLSELP001_1.xml" />
+    <Content Include="XML\DLLSELP001_2.xml" />
+    <Content Include="XML\DOCMENP001.xml" />
+    <Content Include="XML\DOCUPDP001.xml" />
+    <Content Include="XML\DSULSTP001.xml" />
+    <Content Include="XML\EQULSTP001.xml" />
+    <Content Include="XML\ERRLSTP001.xml" />
+    <Content Include="XML\ERRSELP001.xml" />
+    <Content Include="XML\ExculsiveList.xml" />
+    <Content Include="XML\HEALSTP001.xml" />
+    <Content Include="XML\HEAUPDP001.xml" />
+    <Content Include="XML\ICHLSTP001.xml" />
+    <Content Include="XML\ICHLSTP002.xml" />
+    <Content Include="XML\Message.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\MNTOUTP001.xml" />
+    <Content Include="XML\MNTSELP001.xml" />
+    <Content Include="XML\MNTUPDP001.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\MSTLSTP001.xml" />
+    <Content Include="XML\OVELSTP001.xml" />
+    <Content Include="XML\OVELSTP002.xml" />
+    <Content Include="XML\QUAOUTP001.xml" />
+    <Content Include="XML\QUAOUTP001_1.xml" />
+    <Content Include="XML\QUAUPDP001.xml" />
+    <Content Include="XML\QUAUPDP002.xml" />
+    <Content Include="XML\REPLSTP001.xml" />
+    <Content Include="XML\REPUPDP001.xml" />
+    <Content Include="XML\REPUPDP001_Header.xml" />
+    <Content Include="XML\REPUPDP002.xml" />
+    <Content Include="XML\REQINQP001.xml" />
+    <Content Include="XML\REQLSTP001.xml" />
+    <Content Include="XML\REQLSTP001_1.xml" />
+    <Content Include="XML\REQLSTP001_1_Header.xml" />
+    <Content Include="XML\REQLSTP001_2.xml" />
+    <Content Include="XML\REQLSTP001_3.xml" />
+    <Content Include="XML\REQLSTP001_4.xml" />
+    <Content Include="XML\REQLSTP002.xml" />
+    <Content Include="XML\REQSELP001.xml" />
+    <Content Include="XML\REQSELP001_Header.xml" />
+    <Content Include="XML\SCLINPP001.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\SCLLSTP001.xml" />
+    <Content Include="XML\SCLUPDP001.xml" />
+    <Content Include="XML\SERLSTP001.xml" />
+    <Content Include="XML\SERUPDP001.xml" />
+    <Content Include="XML\SLFLSTP001.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\SLFLSTP002.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\SLFLSTP002_Header.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\SLFLSTP003.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\SLFLSTP003_Header.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\TBPINPP001.xml" />
+    <Content Include="XML\TJKLSTP001.xml" />
+    <Content Include="XML\ValMessage.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\WATINQP001_1.xml" />
+    <Content Include="XML\WATINQP001_2.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\WATLSTP001.xml" />
+    <Content Include="XML\WATLSTP002.xml" />
+    <Content Include="XML\COMUPDMB1.xml" />
+    <Content Include="XML\SLFLSTP004.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\SLFLSTP004_Header.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\COMCLS001\ClsCMCheckColumn.vb" />
+    <Compile Include="Common\COMCLS001\ClsCMCommon.vb" />
+    <Compile Include="Common\COMCLS001\ClsCMDataConnect.vb" />
+    <Compile Include="Common\COMCLS001\ClsCMDataLink.vb" />
+    <Compile Include="Common\COMCLS001\ClsCMDBCom.vb" />
+    <Compile Include="Common\COMCLS001\ClsCMExclusive.vb" />
+    <Compile Include="Common\COMCLS001\ClsCMGridHeaderLoad.vb" />
+    <Compile Include="Common\COMCLS001\ClsCMLabelColumn.vb" />
+    <Compile Include="Common\COMCLS001\ClsCMReport.vb" />
+    <Compile Include="Common\COMCLS001\ClsCMTextColumn.vb" />
+    <Compile Include="Common\COMCLS001\ClsComVer.vb" />
+    <Compile Include="Common\COMCLS001\MdlComver.vb" />
+    <Compile Include="Common\COMLGIP001\COMLGIP001.aspx.designer.vb">
+      <DependentUpon>COMLGIP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMLGIP001\COMLGIP001.aspx.vb">
+      <DependentUpon>COMLGIP001.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMLSTP001\COMLSTP001.aspx.designer.vb">
+      <DependentUpon>COMLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMLSTP001\COMLSTP001.aspx.vb">
+      <DependentUpon>COMLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMLSTP002\COMLSTP002.aspx.designer.vb">
+      <DependentUpon>COMLSTP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMLSTP002\COMLSTP002.aspx.vb">
+      <DependentUpon>COMLSTP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMLSTP099\COMLSTP099.ashx.vb">
+      <DependentUpon>COMLSTP099.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMLSTP099\COMLSTP099.aspx.designer.vb">
+      <DependentUpon>COMLSTP099.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMLSTP099\COMLSTP099.aspx.vb">
+      <DependentUpon>COMLSTP099.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMMENP001\COMMENP001.aspx.designer.vb">
+      <DependentUpon>COMMENP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMMENP001\COMMENP001.aspx.vb">
+      <DependentUpon>COMMENP001.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMMENP002\COMMENP002.aspx.designer.vb">
+      <DependentUpon>COMMENP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMMENP002\COMMENP002.aspx.vb">
+      <DependentUpon>COMMENP002.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMMENP003\COMMENP003.aspx.designer.vb">
+      <DependentUpon>COMMENP003.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMMENP003\COMMENP003.aspx.vb">
+      <DependentUpon>COMMENP003.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMMENP004\COMMENP004.aspx.designer.vb">
+      <DependentUpon>COMMENP004.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMMENP004\COMMENP004.aspx.vb">
+      <DependentUpon>COMMENP004.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMMENP005\COMMENP005.aspx.designer.vb">
+      <DependentUpon>COMMENP005.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMMENP005\COMMENP005.aspx.vb">
+      <DependentUpon>COMMENP005.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMMENP006\COMMENP006.aspx.designer.vb">
+      <DependentUpon>COMMENP006.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMMENP006\COMMENP006.aspx.vb">
+      <DependentUpon>COMMENP006.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMMENP007\COMMENP007.aspx.designer.vb">
+      <DependentUpon>COMMENP007.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMMENP007\COMMENP007.aspx.vb">
+      <DependentUpon>COMMENP007.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMMENP008\COMMENP008.aspx.designer.vb">
+      <DependentUpon>COMMENP008.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMMENP008\COMMENP008.aspx.vb">
+      <DependentUpon>COMMENP008.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMMENP009\COMMENP009.aspx.designer.vb">
+      <DependentUpon>COMMENP009.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMMENP009\COMMENP009.aspx.vb">
+      <DependentUpon>COMMENP009.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMMENP010\COMMENP010.aspx.designer.vb">
+      <DependentUpon>COMMENP010.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMMENP010\COMMENP010.aspx.vb">
+      <DependentUpon>COMMENP010.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMPRVP001\COMPRVP001.aspx.designer.vb">
+      <DependentUpon>COMPRVP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMPRVP001\COMPRVP001.aspx.vb">
+      <DependentUpon>COMPRVP001.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMSELP001\COMSELP001.aspx.designer.vb">
+      <DependentUpon>COMSELP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMSELP001\COMSELP001.aspx.vb">
+      <DependentUpon>COMSELP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMSELP002\COMSELP002.aspx.designer.vb">
+      <DependentUpon>COMSELP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMSELP002\COMSELP002.aspx.vb">
+      <DependentUpon>COMSELP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMSELP004\COMSELP004.aspx.designer.vb">
+      <DependentUpon>COMSELP004.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMSELP004\COMSELP004.aspx.vb">
+      <DependentUpon>COMSELP004.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\COMSELP005\COMSELP005.aspx.designer.vb">
+      <DependentUpon>COMSELP005.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\COMSELP005\COMSELP005.aspx.vb">
+      <DependentUpon>COMSELP005.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\DLCINPP001\DLCINPP001.aspx.designer.vb">
+      <DependentUpon>DLCINPP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DLCINPP001\DLCINPP001.aspx.vb">
+      <DependentUpon>DLCINPP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\DLCINPP002\DLCINPP002.aspx.designer.vb">
+      <DependentUpon>DLCINPP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DLCINPP002\DLCINPP002.aspx.vb">
+      <DependentUpon>DLCINPP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSINQP001\CNSINQP001.aspx.designer.vb">
+      <DependentUpon>CNSINQP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSINQP001\CNSINQP001.aspx.vb">
+      <DependentUpon>CNSINQP001.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSLSTP001\CNSLSTP001.aspx.designer.vb">
+      <DependentUpon>CNSLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSLSTP001\CNSLSTP001.aspx.vb">
+      <DependentUpon>CNSLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSLSTP002\CNSLSTP002.aspx.designer.vb">
+      <DependentUpon>CNSLSTP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSLSTP002\CNSLSTP002.aspx.vb">
+      <DependentUpon>CNSLSTP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSLSTP004\CNSLSTP004.aspx.designer.vb">
+      <DependentUpon>CNSLSTP004.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSLSTP004\CNSLSTP004.aspx.vb">
+      <DependentUpon>CNSLSTP004.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSLSTP005\CNSLSTP005.aspx.designer.vb">
+      <DependentUpon>CNSLSTP005.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSLSTP005\CNSLSTP005.aspx.vb">
+      <DependentUpon>CNSLSTP005.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSLSTP006\CNSLSTP006.aspx.designer.vb">
+      <DependentUpon>CNSLSTP006.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSLSTP006\CNSLSTP006.aspx.vb">
+      <DependentUpon>CNSLSTP006.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSLSTP007\CNSLSTP007.aspx.designer.vb">
+      <DependentUpon>CNSLSTP007.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSLSTP007\CNSLSTP007.aspx.vb">
+      <DependentUpon>CNSLSTP007.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSOUTP001\CNSOUTP001.aspx.designer.vb">
+      <DependentUpon>CNSOUTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSOUTP001\CNSOUTP001.aspx.vb">
+      <DependentUpon>CNSOUTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSUPDP001\CNSUPDP001.aspx.designer.vb">
+      <DependentUpon>CNSUPDP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSUPDP001\CNSUPDP001.aspx.vb">
+      <DependentUpon>CNSUPDP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSUPDP002\CNSUPDP002.aspx.designer.vb">
+      <DependentUpon>CNSUPDP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSUPDP002\CNSUPDP002.aspx.vb">
+      <DependentUpon>CNSUPDP002.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSUPDP003\CNSUPDP003.aspx.designer.vb">
+      <DependentUpon>CNSUPDP003.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSUPDP003\CNSUPDP003.aspx.vb">
+      <DependentUpon>CNSUPDP003.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSUPDP004\CNSUPDP004.aspx.designer.vb">
+      <DependentUpon>CNSUPDP004.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSUPDP004\CNSUPDP004.aspx.vb">
+      <DependentUpon>CNSUPDP004.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSUPDP005\CNSUPDP005.aspx.designer.vb">
+      <DependentUpon>CNSUPDP005.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSUPDP005\CNSUPDP005.aspx.vb">
+      <DependentUpon>CNSUPDP005.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\CNSUPDP006\CNSUPDP006.aspx.designer.vb">
+      <DependentUpon>CNSUPDP006.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\CNSUPDP006\CNSUPDP006.aspx.vb">
+      <DependentUpon>CNSUPDP006.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Construction\DLLSELP001\DLLSELP001.aspx.designer.vb">
+      <DependentUpon>DLLSELP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\DLLSELP001\DLLSELP001.aspx.vb">
+      <DependentUpon>DLLSELP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\MSTLSTP001\MSTLSTP001.aspx.designer.vb">
+      <DependentUpon>MSTLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\MSTLSTP001\MSTLSTP001.aspx.vb">
+      <DependentUpon>MSTLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\SERLSTP001\SERLSTP001.aspx.designer.vb">
+      <DependentUpon>SERLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\SERLSTP001\SERLSTP001.aspx.vb">
+      <DependentUpon>SERLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Construction\SERUPDP001\SERUPDP001.aspx.designer.vb">
+      <DependentUpon>SERUPDP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Construction\SERUPDP001\SERUPDP001.aspx.vb">
+      <DependentUpon>SERUPDP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataSet\BRKUPDP001_D77_MINI_MANAGE.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BRKUPDP001_D77_MINI_MANAGE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\BRKUPDP001_D78_MINIMNG_DTIL.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BRKUPDP001_D78_MINIMNG_DTIL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\CMPINQP002_DISP.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMPINQP002_DISP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\CNSUPDP001_D39_CNSTREQSPEC.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CNSUPDP001_D39_CNSTREQSPEC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\CNSUPDP001_D47_DLLSEND.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CNSUPDP001_D47_DLLSEND.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\CNSUPDP001_D61_CNSTREQSPEC_HIST.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CNSUPDP001_D61_CNSTREQSPEC_HIST.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\REQSELP001_D73_TROUBLE.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REQSELP001_D73_TROUBLE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\REQSELP001_D74_TROUBLE_DTIL.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REQSELP001_D74_TROUBLE_DTIL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\WATINQP001_DATASET.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WATINQP001_DATASET.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExculsiveList.aspx.designer.vb">
+      <DependentUpon>ExculsiveList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExculsiveList.aspx.vb">
+      <DependentUpon>ExculsiveList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exculsive_del.aspx.designer.vb">
+      <DependentUpon>Exculsive_del.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exculsive_del.aspx.vb">
+      <DependentUpon>Exculsive_del.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FaultReception\BRKINQP001\BRKINQP001.aspx.designer.vb">
+      <DependentUpon>BRKINQP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FaultReception\BRKINQP001\BRKINQP001.aspx.vb">
+      <DependentUpon>BRKINQP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FaultReception\BRKLSTP001\BRKLSTP001.aspx.designer.vb">
+      <DependentUpon>BRKLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FaultReception\BRKLSTP001\BRKLSTP001.aspx.vb">
+      <DependentUpon>BRKLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FaultReception\BRKUPDP001\BRKUPDP001.aspx.designer.vb">
+      <DependentUpon>BRKUPDP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FaultReception\BRKUPDP001\BRKUPDP001.aspx.vb">
+      <DependentUpon>BRKUPDP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\BPIFIXP001\BPIFIXP001.aspx.designer.vb">
+      <DependentUpon>BPIFIXP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\BPIFIXP001\BPIFIXP001.aspx.vb">
+      <DependentUpon>BPIFIXP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\BPIINQP001\BPIINQP001.aspx.designer.vb">
+      <DependentUpon>BPIINQP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\BPIINQP001\BPIINQP001.aspx.vb">
+      <DependentUpon>BPIINQP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\BPILSTP001\BPILSTP001.aspx.designer.vb">
+      <DependentUpon>BPILSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\BPILSTP001\BPILSTP001.aspx.vb">
+      <DependentUpon>BPILSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMPINQP001\CMPINQP001.aspx.designer.vb">
+      <DependentUpon>CMPINQP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMPINQP001\CMPINQP001.aspx.vb">
+      <DependentUpon>CMPINQP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMPINQP002\CMPINQP002.aspx.designer.vb">
+      <DependentUpon>CMPINQP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMPINQP002\CMPINQP002.aspx.vb">
+      <DependentUpon>CMPINQP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMPLSTP001\CMPLSTP001.aspx.designer.vb">
+      <DependentUpon>CMPLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMPLSTP001\CMPLSTP001.aspx.vb">
+      <DependentUpon>CMPLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMPLSTP002\CMPLSTP002.aspx.designer.vb">
+      <DependentUpon>CMPLSTP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMPLSTP002\CMPLSTP002.aspx.vb">
+      <DependentUpon>CMPLSTP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMPLSTP003\CMPLSTP003.aspx.designer.vb">
+      <DependentUpon>CMPLSTP003.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMPLSTP003\CMPLSTP003.aspx.vb">
+      <DependentUpon>CMPLSTP003.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMPOUTP001\CMPOUTP001.aspx.designer.vb">
+      <DependentUpon>CMPOUTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMPOUTP001\CMPOUTP001.aspx.vb">
+      <DependentUpon>CMPOUTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMPSELP001\CMPSELP001.aspx.designer.vb">
+      <DependentUpon>CMPSELP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMPSELP001\CMPSELP001.aspx.vb">
+      <DependentUpon>CMPSELP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMPSELP002\CMPSELP002.aspx.designer.vb">
+      <DependentUpon>CMPSELP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMPSELP002\CMPSELP002.aspx.vb">
+      <DependentUpon>CMPSELP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMPUPDP001\CMPUPDP001.aspx.designer.vb">
+      <DependentUpon>CMPUPDP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMPUPDP001\CMPUPDP001.aspx.vb">
+      <DependentUpon>CMPUPDP001.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CMPUPDP002\CMPUPDP002.aspx.designer.vb">
+      <DependentUpon>CMPUPDP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CMPUPDP002\CMPUPDP002.aspx.vb">
+      <DependentUpon>CMPUPDP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CTISELP005\CTISELP005.aspx.designer.vb">
+      <DependentUpon>CTISELP005.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CTISELP005\CTISELP005.aspx.vb">
+      <DependentUpon>CTISELP005.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\CTISELP019\CTISELP019.aspx.designer.vb">
+      <DependentUpon>CTISELP019.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\CTISELP019\CTISELP019.aspx.vb">
+      <DependentUpon>CTISELP019.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\EQULSTP001\EQULSTP001.aspx.designer.vb">
+      <DependentUpon>EQULSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\EQULSTP001\EQULSTP001.aspx.vb">
+      <DependentUpon>EQULSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\EQULSTP003\EQULSTP003.aspx.designer.vb">
+      <DependentUpon>EQULSTP003.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\EQULSTP003\EQULSTP003.aspx.vb">
+      <DependentUpon>EQULSTP003.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\QUAOUTP001\QUAOUTP001.aspx.designer.vb">
+      <DependentUpon>QUAOUTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\QUAOUTP001\QUAOUTP001.aspx.vb">
+      <DependentUpon>QUAOUTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\QUAUPDP001\QUAUPDP001.aspx.designer.vb">
+      <DependentUpon>QUAUPDP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\QUAUPDP001\QUAUPDP001.aspx.vb">
+      <DependentUpon>QUAUPDP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\QUAUPDP002\QUAUPDP002.aspx.designer.vb">
+      <DependentUpon>QUAUPDP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\QUAUPDP002\QUAUPDP002.aspx.vb">
+      <DependentUpon>QUAUPDP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\REQINQP001\REQINQP001.aspx.designer.vb">
+      <DependentUpon>REQINQP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\REQINQP001\REQINQP001.aspx.vb">
+      <DependentUpon>REQINQP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\REQLSTP001\REQLSTP001.aspx.designer.vb">
+      <DependentUpon>REQLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\REQLSTP001\REQLSTP001.aspx.vb">
+      <DependentUpon>REQLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\REQLSTP002\REQLSTP002.aspx.designer.vb">
+      <DependentUpon>REQLSTP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\REQLSTP002\REQLSTP002.aspx.vb">
+      <DependentUpon>REQLSTP002.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\REQSELP001\REQSELP001.aspx.designer.vb">
+      <DependentUpon>REQSELP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\REQSELP001\REQSELP001.aspx.vb">
+      <DependentUpon>REQSELP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\AutoComplete.asmx.vb">
+      <DependentUpon>AutoComplete.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Master\ClsMSTCommon.vb" />
+    <Compile Include="Master\ClsSQL.vb" />
+    <Compile Include="Master\COMUPDM01\COMUPDM01.aspx.designer.vb">
+      <DependentUpon>COMUPDM01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM01\COMUPDM01.aspx.vb">
+      <DependentUpon>COMUPDM01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM02\COMUPDM02.aspx.designer.vb">
+      <DependentUpon>COMUPDM02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM02\COMUPDM02.aspx.vb">
+      <DependentUpon>COMUPDM02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM03\COMUPDM03.aspx.designer.vb">
+      <DependentUpon>COMUPDM03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM03\COMUPDM03.aspx.vb">
+      <DependentUpon>COMUPDM03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM06\COMUPDM06.aspx.designer.vb">
+      <DependentUpon>COMUPDM06.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM06\COMUPDM06.aspx.vb">
+      <DependentUpon>COMUPDM06.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM07\COMUPDM07.aspx.designer.vb">
+      <DependentUpon>COMUPDM07.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM07\COMUPDM07.aspx.vb">
+      <DependentUpon>COMUPDM07.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM19\COMUPDM19.aspx.designer.vb">
+      <DependentUpon>COMUPDM19.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM19\COMUPDM19.aspx.vb">
+      <DependentUpon>COMUPDM19.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM23\COMUPDM23.aspx.designer.vb">
+      <DependentUpon>COMUPDM23.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM23\COMUPDM23.aspx.vb">
+      <DependentUpon>COMUPDM23.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM31\COMUPDM31.aspx.designer.vb">
+      <DependentUpon>COMUPDM31.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM31\COMUPDM31.aspx.vb">
+      <DependentUpon>COMUPDM31.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM32\COMUPDM32.aspx.designer.vb">
+      <DependentUpon>COMUPDM32.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM32\COMUPDM32.aspx.vb">
+      <DependentUpon>COMUPDM32.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM36\COMUPDM36.aspx.designer.vb">
+      <DependentUpon>COMUPDM36.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM36\COMUPDM36.aspx.vb">
+      <DependentUpon>COMUPDM36.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM37\COMUPDM37.aspx.designer.vb">
+      <DependentUpon>COMUPDM37.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM37\COMUPDM37.aspx.vb">
+      <DependentUpon>COMUPDM37.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM38\COMUPDM38.aspx.designer.vb">
+      <DependentUpon>COMUPDM38.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM38\COMUPDM38.aspx.vb">
+      <DependentUpon>COMUPDM38.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM40\COMUPDM40.aspx.designer.vb">
+      <DependentUpon>COMUPDM40.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM40\COMUPDM40.aspx.vb">
+      <DependentUpon>COMUPDM40.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM40\COMUPDM40_Mst.Master.designer.vb">
+      <DependentUpon>COMUPDM40_Mst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM40\COMUPDM40_Mst.Master.vb">
+      <DependentUpon>COMUPDM40_Mst.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM41\COMUPDM41.aspx.designer.vb">
+      <DependentUpon>COMUPDM41.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM41\COMUPDM41.aspx.vb">
+      <DependentUpon>COMUPDM41.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM44\COMUPDM44.aspx.designer.vb">
+      <DependentUpon>COMUPDM44.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM44\COMUPDM44.aspx.vb">
+      <DependentUpon>COMUPDM44.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM45\COMUPDM45.aspx.designer.vb">
+      <DependentUpon>COMUPDM45.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM45\COMUPDM45.aspx.vb">
+      <DependentUpon>COMUPDM45.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM47\COMUPDM47.aspx.designer.vb">
+      <DependentUpon>COMUPDM47.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM47\COMUPDM47.aspx.vb">
+      <DependentUpon>COMUPDM47.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM48\COMUPDM48.aspx.designer.vb">
+      <DependentUpon>COMUPDM48.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM48\COMUPDM48.aspx.vb">
+      <DependentUpon>COMUPDM48.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM53\COMUPDM53.aspx.designer.vb">
+      <DependentUpon>COMUPDM53.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM53\COMUPDM53.aspx.vb">
+      <DependentUpon>COMUPDM53.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM54\COMUPDM54.aspx.designer.vb">
+      <DependentUpon>COMUPDM54.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM54\COMUPDM54.aspx.vb">
+      <DependentUpon>COMUPDM54.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM54\COMUPDM54_Mst.Master.designer.vb">
+      <DependentUpon>COMUPDM54_Mst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM54\COMUPDM54_Mst.Master.vb">
+      <DependentUpon>COMUPDM54_Mst.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM55\COMUPDM55.aspx.designer.vb">
+      <DependentUpon>COMUPDM55.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM55\COMUPDM55.aspx.vb">
+      <DependentUpon>COMUPDM55.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM55\COMUPDM55_Mst.Master.designer.vb">
+      <DependentUpon>COMUPDM55_Mst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM55\COMUPDM55_Mst.Master.vb">
+      <DependentUpon>COMUPDM55_Mst.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM66\COMUPDM66.aspx.designer.vb">
+      <DependentUpon>COMUPDM66.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM66\COMUPDM66.aspx.vb">
+      <DependentUpon>COMUPDM66.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM68\COMUPDM68.aspx.designer.vb">
+      <DependentUpon>COMUPDM68.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM68\COMUPDM68.aspx.vb">
+      <DependentUpon>COMUPDM68.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM69\COMUPDM69.aspx.designer.vb">
+      <DependentUpon>COMUPDM69.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM69\COMUPDM69.aspx.vb">
+      <DependentUpon>COMUPDM69.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM70\COMUPDM70.aspx.designer.vb">
+      <DependentUpon>COMUPDM70.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM70\COMUPDM70.aspx.vb">
+      <DependentUpon>COMUPDM70.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM71\COMUPDM71.aspx.designer.vb">
+      <DependentUpon>COMUPDM71.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM71\COMUPDM71.aspx.vb">
+      <DependentUpon>COMUPDM71.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM73\COMUPDM73.aspx.designer.vb">
+      <DependentUpon>COMUPDM73.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM73\COMUPDM73.aspx.vb">
+      <DependentUpon>COMUPDM73.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM75\COMUPDM75.aspx.designer.vb">
+      <DependentUpon>COMUPDM75.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM75\COMUPDM75.aspx.vb">
+      <DependentUpon>COMUPDM75.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM77\COMUPDM77.aspx.designer.vb">
+      <DependentUpon>COMUPDM77.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM77\COMUPDM77.aspx.vb">
+      <DependentUpon>COMUPDM77.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM80\COMUPDM80.aspx.designer.vb">
+      <DependentUpon>COMUPDM80.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM80\COMUPDM80.aspx.vb">
+      <DependentUpon>COMUPDM80.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM85\COMUPDM85.aspx.designer.vb">
+      <DependentUpon>COMUPDM85.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM85\COMUPDM85.aspx.vb">
+      <DependentUpon>COMUPDM85.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM87\COMUPDM87.aspx.designer.vb">
+      <DependentUpon>COMUPDM87.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM87\COMUPDM87.aspx.vb">
+      <DependentUpon>COMUPDM87.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM89\COMUPDM89.aspx.designer.vb">
+      <DependentUpon>COMUPDM89.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM89\COMUPDM89.aspx.vb">
+      <DependentUpon>COMUPDM89.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM90\COMUPDM90.aspx.designer.vb">
+      <DependentUpon>COMUPDM90.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM90\COMUPDM90.aspx.vb">
+      <DependentUpon>COMUPDM90.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM92\COMUPDM92.aspx.designer.vb">
+      <DependentUpon>COMUPDM92.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM92\COMUPDM92.aspx.vb">
+      <DependentUpon>COMUPDM92.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM95\COMUPDM95.aspx.designer.vb">
+      <DependentUpon>COMUPDM95.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM95\COMUPDM95.aspx.vb">
+      <DependentUpon>COMUPDM95.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM96\COMUPDM96.aspx.designer.vb">
+      <DependentUpon>COMUPDM96.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM96\COMUPDM96.aspx.vb">
+      <DependentUpon>COMUPDM96.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDM97\COMUPDM97.aspx.designer.vb">
+      <DependentUpon>COMUPDM97.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDM97\COMUPDM97.aspx.vb">
+      <DependentUpon>COMUPDM97.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDMA0\COMUPDMA0.aspx.designer.vb">
+      <DependentUpon>COMUPDMA0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDMA0\COMUPDMA0.aspx.vb">
+      <DependentUpon>COMUPDMA0.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDMA1\COMUPDMA1.aspx.designer.vb">
+      <DependentUpon>COMUPDMA1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDMA1\COMUPDMA1.aspx.vb">
+      <DependentUpon>COMUPDMA1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDMA7\COMUPDMA7.aspx.designer.vb">
+      <DependentUpon>COMUPDMA7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDMA7\COMUPDMA7.aspx.vb">
+      <DependentUpon>COMUPDMA7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDMA8\COMUPDMA8.aspx.designer.vb">
+      <DependentUpon>COMUPDMA8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDMA8\COMUPDMA8.aspx.vb">
+      <DependentUpon>COMUPDMA8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDMB1\COMUPDMB1.aspx.designer.vb">
+      <DependentUpon>COMUPDMB1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDMB1\COMUPDMB1.aspx.vb">
+      <DependentUpon>COMUPDMB1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\COMUPDMB2\COMUPDMB2.aspx.designer.vb">
+      <DependentUpon>COMUPDMB2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\COMUPDMB2\COMUPDMB2.aspx.vb">
+      <DependentUpon>COMUPDMB2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Master\MasterMenu\ComMstMenu.aspx.designer.vb">
+      <DependentUpon>ComMstMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MasterMenu\ComMstMenu.aspx.vb">
+      <DependentUpon>ComMstMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Mst.Master.designer.vb">
+      <DependentUpon>Mst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Mst.Master.vb">
+      <DependentUpon>Mst.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Mst_Ref.Master.designer.vb">
+      <DependentUpon>Mst_Ref.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Mst_Ref.Master.vb">
+      <DependentUpon>Mst_Ref.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reference.master.designer.vb">
+      <DependentUpon>Reference.master</DependentUpon>
+    </Compile>
+    <Compile Include="Reference.master.vb">
+      <DependentUpon>Reference.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reference_Reverse.master.designer.vb">
+      <DependentUpon>Reference_Reverse.master</DependentUpon>
+    </Compile>
+    <Compile Include="Reference_Reverse.master.vb">
+      <DependentUpon>Reference_Reverse.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepairEequipment\MNTOUTP001\MNTOUTP001.aspx.designer.vb">
+      <DependentUpon>MNTOUTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepairEequipment\MNTOUTP001\MNTOUTP001.aspx.vb">
+      <DependentUpon>MNTOUTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepairEequipment\MNTSELP001\MNTSELP001.aspx.designer.vb">
+      <DependentUpon>MNTSELP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepairEequipment\MNTSELP001\MNTSELP001.aspx.vb">
+      <DependentUpon>MNTSELP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepairEequipment\MNTUPDP001\MNTUPDP001.aspx.designer.vb">
+      <DependentUpon>MNTUPDP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepairEequipment\MNTUPDP001\MNTUPDP001.aspx.vb">
+      <DependentUpon>MNTUPDP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepairEequipment\REPLSTP001\REPLSTP001.aspx.designer.vb">
+      <DependentUpon>REPLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepairEequipment\REPLSTP001\REPLSTP001.aspx.vb">
+      <DependentUpon>REPLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepairEequipment\REPUPDP001\REPUPDP001.aspx.designer.vb">
+      <DependentUpon>REPUPDP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepairEequipment\REPUPDP001\REPUPDP001.aspx.vb">
+      <DependentUpon>REPUPDP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepairEequipment\REPUPDP002\REPUPDP002.aspx.designer.vb">
+      <DependentUpon>REPUPDP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepairEequipment\REPUPDP002\REPUPDP002.aspx.vb">
+      <DependentUpon>REPUPDP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\BBPREP001.Designer.vb">
+      <DependentUpon>BBPREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BBPREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BBPREP002.Designer.vb">
+      <DependentUpon>BBPREP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BBPREP002.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BBPREP003.Designer.vb">
+      <DependentUpon>BBPREP003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BBPREP003.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BBPREP003_2.Designer.vb">
+      <DependentUpon>BBPREP003_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BBPREP003_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BPIREP002.Designer.vb">
+      <DependentUpon>BPIREP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BPIREP002.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CDPREP001.Designer.vb">
+      <DependentUpon>CDPREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CDPREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CDPREP001_1.Designer.vb">
+      <DependentUpon>CDPREP001_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CDPREP001_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CDPREP002.Designer.vb">
+      <DependentUpon>CDPREP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CDPREP002.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CMPREP001.Designer.vb">
+      <DependentUpon>CMPREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CMPREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CMPREP002.Designer.vb">
+      <DependentUpon>CMPREP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CMPREP002.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CMPREP003.Designer.vb">
+      <DependentUpon>CMPREP003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CMPREP003.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CMPREP004.Designer.vb">
+      <DependentUpon>CMPREP004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CMPREP004.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP001.Designer.vb">
+      <DependentUpon>CNSREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP002.designer.vb">
+      <DependentUpon>CNSREP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP002.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP004.Designer.vb">
+      <DependentUpon>CNSREP004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP004.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP006.Designer.vb">
+      <DependentUpon>CNSREP006.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP006.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP008.Designer.vb">
+      <DependentUpon>CNSREP008.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP008.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP009.Designer.vb">
+      <DependentUpon>CNSREP009.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP009.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP009_1.Designer.vb">
+      <DependentUpon>CNSREP009_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP009_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP009_2.Designer.vb">
+      <DependentUpon>CNSREP009_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP009_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP010.Designer.vb">
+      <DependentUpon>CNSREP010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP010.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP013.Designer.vb">
+      <DependentUpon>CNSREP013.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP013.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP015.Designer.vb">
+      <DependentUpon>CNSREP015.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP015.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP016.Designer.vb">
+      <DependentUpon>CNSREP016.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP016.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP017.Designer.vb">
+      <DependentUpon>CNSREP017.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP017.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP019.Designer.vb">
+      <DependentUpon>CNSREP019.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP019.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CNSREP020.Designer.vb">
+      <DependentUpon>CNSREP020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CNSREP020.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DLCREP001.Designer.vb">
+      <DependentUpon>DLCREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DLCREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DOCREP002.Designer.vb">
+      <DependentUpon>DOCREP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DOCREP002.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DOCREP002_1.Designer.vb">
+      <DependentUpon>DOCREP002_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DOCREP002_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DOCREP002_2.Designer.vb">
+      <DependentUpon>DOCREP002_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DOCREP002_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DOCREP003.Designer.vb">
+      <DependentUpon>DOCREP003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DOCREP003.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DOCREP004.Designer.vb">
+      <DependentUpon>DOCREP004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DOCREP004.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DOCREP005.Designer.vb">
+      <DependentUpon>DOCREP005.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DOCREP005.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DOCREP006.Designer.vb">
+      <DependentUpon>DOCREP006.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DOCREP006.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DSUREP001.Designer.vb">
+      <DependentUpon>DSUREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DSUREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ETCREP017.Designer.vb">
+      <DependentUpon>ETCREP017.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ETCREP017.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ETCREP018.designer.vb">
+      <DependentUpon>ETCREP018.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ETCREP018.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ETCREP020.Designer.vb">
+      <DependentUpon>ETCREP020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ETCREP020.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ETCREP021.Designer.vb">
+      <DependentUpon>ETCREP021.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ETCREP021.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ICHREP001.Designer.vb">
+      <DependentUpon>ICHREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ICHREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\MNTREP001.Designer.vb">
+      <DependentUpon>MNTREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\MNTREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\MNTREP003.Designer.vb">
+      <DependentUpon>MNTREP003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\MNTREP003.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\MNTREP004.Designer.vb">
+      <DependentUpon>MNTREP004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\MNTREP004.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\MNTREP005.Designer.vb">
+      <DependentUpon>MNTREP005.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\MNTREP005.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\MSTREP001.Designer.vb">
+      <DependentUpon>MSTREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\MSTREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\MSTREP002.Designer.vb">
+      <DependentUpon>MSTREP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\MSTREP002.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\MSTREP040.Designer.vb">
+      <DependentUpon>MSTREP040.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\MSTREP040.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\MSTREP055.Designer.vb">
+      <DependentUpon>MSTREP055.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\MSTREP055.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\MSTREP056.designer.vb">
+      <DependentUpon>MSTREP056.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\MSTREP056.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\REPREP002.Designer.vb">
+      <DependentUpon>REPREP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\REPREP002.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\REPREP003.Designer.vb">
+      <DependentUpon>REPREP003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\REPREP003.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\REPREP058.Designer.vb">
+      <DependentUpon>REPREP058.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\REPREP058.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\REQREP001.Designer.vb">
+      <DependentUpon>REQREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\REQREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\REQREP002.Designer.vb">
+      <DependentUpon>REQREP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\REQREP002.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\REQREP003.Designer.vb">
+      <DependentUpon>REQREP003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\REQREP003.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\REQREP004.Designer.vb">
+      <DependentUpon>REQREP004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\REQREP004.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\RETREP001.Designer.vb">
+      <DependentUpon>RETREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\RETREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\RETREP002.Designer.vb">
+      <DependentUpon>RETREP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\RETREP002.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SERREP004.Designer.vb">
+      <DependentUpon>SERREP004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\SERREP004.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SLFREP001.Designer.vb">
+      <DependentUpon>SLFREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\SLFREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP001.Designer.vb">
+      <DependentUpon>TBRREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP002.Designer.vb">
+      <DependentUpon>TBRREP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP002.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP002_1.Designer.vb">
+      <DependentUpon>TBRREP002_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP002_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP002_2.Designer.vb">
+      <DependentUpon>TBRREP002_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP002_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP003.Designer.vb">
+      <DependentUpon>TBRREP003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP003.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP004.Designer.vb">
+      <DependentUpon>TBRREP004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP004.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP005.Designer.vb">
+      <DependentUpon>TBRREP005.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP005.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP006.Designer.vb">
+      <DependentUpon>TBRREP006.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP006.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP007.Designer.vb">
+      <DependentUpon>TBRREP007.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP007.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP008.Designer.vb">
+      <DependentUpon>TBRREP008.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP008.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP009.Designer.vb">
+      <DependentUpon>TBRREP009.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP009.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP010.Designer.vb">
+      <DependentUpon>TBRREP010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP010.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP011.Designer.vb">
+      <DependentUpon>TBRREP011.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP011.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP012.Designer.vb">
+      <DependentUpon>TBRREP012.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP012.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP013.Designer.vb">
+      <DependentUpon>TBRREP013.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP013.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP013_1.Designer.vb">
+      <DependentUpon>TBRREP013_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP013_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP013_2.Designer.vb">
+      <DependentUpon>TBRREP013_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP013_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP014.Designer.vb">
+      <DependentUpon>TBRREP014.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP014.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP014_1.Designer.vb">
+      <DependentUpon>TBRREP014_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP014_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP014_2.Designer.vb">
+      <DependentUpon>TBRREP014_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP014_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP015.Designer.vb">
+      <DependentUpon>TBRREP015.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP015.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP016.Designer.vb">
+      <DependentUpon>TBRREP016.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP016.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP017.Designer.vb">
+      <DependentUpon>TBRREP017.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP017.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TBRREP018.Designer.vb">
+      <DependentUpon>TBRREP018.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TBRREP018.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\WATREP001.Designer.vb">
+      <DependentUpon>WATREP001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\WATREP001.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\WATREP002.Designer.vb">
+      <DependentUpon>WATREP002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\WATREP002.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\WATREP004.Designer.vb">
+      <DependentUpon>WATREP004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\WATREP004.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\WATREP005.Designer.vb">
+      <DependentUpon>WATREP005.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\WATREP005.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\SCLINPP001\SCLINPP001.aspx.designer.vb">
+      <DependentUpon>SCLINPP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\SCLINPP001\SCLINPP001.aspx.vb">
+      <DependentUpon>SCLINPP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\SCLLSTP001\SCLLSTP001.aspx.designer.vb">
+      <DependentUpon>SCLLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\SCLLSTP001\SCLLSTP001.aspx.vb">
+      <DependentUpon>SCLLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\SCLMENP001\SCLMENP001.aspx.designer.vb">
+      <DependentUpon>SCLMENP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\SCLMENP001\SCLMENP001.aspx.vb">
+      <DependentUpon>SCLMENP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\SCLUPDP001\SCLUPDP001.aspx.designer.vb">
+      <DependentUpon>SCLUPDP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\SCLUPDP001\SCLUPDP001.aspx.vb">
+      <DependentUpon>SCLUPDP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportCenter\BBPLSTP001\BBPLSTP001.aspx.designer.vb">
+      <DependentUpon>BBPLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportCenter\BBPLSTP001\BBPLSTP001.aspx.vb">
+      <DependentUpon>BBPLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportCenter\BBPUPDP001\BBPUPDP001.aspx.designer.vb">
+      <DependentUpon>BBPUPDP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportCenter\BBPUPDP001\BBPUPDP001.aspx.vb">
+      <DependentUpon>BBPUPDP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportCenter\CDPLSTP001\CDPLSTP001.aspx.designer.vb">
+      <DependentUpon>CDPLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportCenter\CDPLSTP001\CDPLSTP001.aspx.vb">
+      <DependentUpon>CDPLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportCenter\DOCMENP001\DOCMENP001.aspx.designer.vb">
+      <DependentUpon>DOCMENP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportCenter\DOCMENP001\DOCMENP001.aspx.vb">
+      <DependentUpon>DOCMENP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportCenter\DOCUPDP001\DOCUPDP001.aspx.designer.vb">
+      <DependentUpon>DOCUPDP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportCenter\DOCUPDP001\DOCUPDP001.aspx.vb">
+      <DependentUpon>DOCUPDP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportCenter\TBPINPP001\TBPINPP001.aspx.designer.vb">
+      <DependentUpon>TBPINPP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportCenter\TBPINPP001\TBPINPP001.aspx.vb">
+      <DependentUpon>TBPINPP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemMaintenance\SMTDEN001\SMTDEN001.asmx.vb">
+      <DependentUpon>SMTDEN001.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemMaintenance\SMTDLE001\SMTDLE001.asmx.vb">
+      <DependentUpon>SMTDLE001.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemMaintenance\SMTDSY001\SMTDSY001.asmx.vb">
+      <DependentUpon>SMTDSY001.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemMaintenance\SMTSKF001\SMTSKF001.asmx.vb">
+      <DependentUpon>SMTSKF001.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemMaintenance\SMTSSF001\SMTSSF001.asmx.vb">
+      <DependentUpon>SMTSSF001.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Test\TESTMENU\TESTMENU.aspx.designer.vb">
+      <DependentUpon>TESTMENU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TESTMENU\TESTMENU.aspx.vb">
+      <DependentUpon>TESTMENU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMDateBox.ascx.designer.vb">
+      <DependentUpon>ClsCMDateBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMDateBox.ascx.vb">
+      <DependentUpon>ClsCMDateBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMDateBoxFromTo.ascx.designer.vb">
+      <DependentUpon>ClsCMDateBoxFromTo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMDateBoxFromTo.ascx.vb">
+      <DependentUpon>ClsCMDateBoxFromTo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMDateTimeBox.ascx.designer.vb">
+      <DependentUpon>ClsCMDateTimeBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMDateTimeBox.ascx.vb">
+      <DependentUpon>ClsCMDateTimeBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMDropDownList.ascx.designer.vb">
+      <DependentUpon>ClsCMDropDownList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMDropDownList.ascx.vb">
+      <DependentUpon>ClsCMDropDownList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMDropDownList_Mastr.ascx.designer.vb">
+      <DependentUpon>ClsCMDropDownList_Mastr.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMDropDownList_Mastr.ascx.vb">
+      <DependentUpon>ClsCMDropDownList_Mastr.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMpnlPopup.ascx.designer.vb">
+      <DependentUpon>ClsCMpnlPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMpnlPopup.ascx.vb">
+      <DependentUpon>ClsCMpnlPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTextBox.ascx.designer.vb">
+      <DependentUpon>ClsCMTextBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTextBox.ascx.vb">
+      <DependentUpon>ClsCMTextBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTextBoxFromTo.ascx.designer.vb">
+      <DependentUpon>ClsCMTextBoxFromTo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTextBoxFromTo.ascx.vb">
+      <DependentUpon>ClsCMTextBoxFromTo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTextBoxPopup.ascx.designer.vb">
+      <DependentUpon>ClsCMTextBoxPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTextBoxPopup.ascx.vb">
+      <DependentUpon>ClsCMTextBoxPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTextBoxRef.ascx.designer.vb">
+      <DependentUpon>ClsCMTextBoxRef.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTextBoxRef.ascx.vb">
+      <DependentUpon>ClsCMTextBoxRef.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTextBoxTwo.ascx.designer.vb">
+      <DependentUpon>ClsCMTextBoxTwo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTextBoxTwo.ascx.vb">
+      <DependentUpon>ClsCMTextBoxTwo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTextBoxTwoFromTo.ascx.designer.vb">
+      <DependentUpon>ClsCMTextBoxTwoFromTo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTextBoxTwoFromTo.ascx.vb">
+      <DependentUpon>ClsCMTextBoxTwoFromTo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTimeBox.ascx.designer.vb">
+      <DependentUpon>ClsCMTimeBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTimeBox.ascx.vb">
+      <DependentUpon>ClsCMTimeBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTimeBoxFromTo.ascx.designer.vb">
+      <DependentUpon>ClsCMTimeBoxFromTo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClsCMTimeBoxFromTo.ascx.vb">
+      <DependentUpon>ClsCMTimeBoxFromTo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\DLCLSTP001\DLCLSTP001.aspx.designer.vb">
+      <DependentUpon>DLCLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\DLCLSTP001\DLCLSTP001.aspx.vb">
+      <DependentUpon>DLCLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\DLLHSTP001\DLLHSTP001.aspx.designer.vb">
+      <DependentUpon>DLLHSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\DLLHSTP001\DLLHSTP001.aspx.vb">
+      <DependentUpon>DLLHSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\DSULSTP001\DSULSTP001.aspx.designer.vb">
+      <DependentUpon>DSULSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\DSULSTP001\DSULSTP001.aspx.vb">
+      <DependentUpon>DSULSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\DSUUPDP001\DSUUPDP001.aspx.designer.vb">
+      <DependentUpon>DSUUPDP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\DSUUPDP001\DSUUPDP001.aspx.vb">
+      <DependentUpon>DSUUPDP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\ERRLSTP001\ERRLSTP001.aspx.designer.vb">
+      <DependentUpon>ERRLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\ERRLSTP001\ERRLSTP001.aspx.vb">
+      <DependentUpon>ERRLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\ERRSELP001\ERRSELP001.aspx.designer.vb">
+      <DependentUpon>ERRSELP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\ERRSELP001\ERRSELP001.aspx.vb">
+      <DependentUpon>ERRSELP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\HEALSTP001\HEALSTP001.aspx.designer.vb">
+      <DependentUpon>HEALSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\HEALSTP001\HEALSTP001.aspx.vb">
+      <DependentUpon>HEALSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\HEAUPDP001\HEAUPDP001.aspx.designer.vb">
+      <DependentUpon>HEAUPDP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\HEAUPDP001\HEAUPDP001.aspx.vb">
+      <DependentUpon>HEAUPDP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\ICHLSTP001\ICHLSTP001.aspx.designer.vb">
+      <DependentUpon>ICHLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\ICHLSTP001\ICHLSTP001.aspx.vb">
+      <DependentUpon>ICHLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\ICHLSTP002\ICHLSTP002.aspx.designer.vb">
+      <DependentUpon>ICHLSTP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\ICHLSTP002\ICHLSTP002.aspx.vb">
+      <DependentUpon>ICHLSTP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\OVELSTP001\OVELSTP001.aspx.designer.vb">
+      <DependentUpon>OVELSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\OVELSTP001\OVELSTP001.aspx.vb">
+      <DependentUpon>OVELSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\OVELSTP002\OVELSTP002.aspx.designer.vb">
+      <DependentUpon>OVELSTP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\OVELSTP002\OVELSTP002.aspx.vb">
+      <DependentUpon>OVELSTP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\SLFLSTP001\SLFLSTP001.aspx.designer.vb">
+      <DependentUpon>SLFLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\SLFLSTP001\SLFLSTP001.aspx.vb">
+      <DependentUpon>SLFLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Watch\SLFLSTP002\SLFLSTP002.aspx.designer.vb">
+      <DependentUpon>SLFLSTP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\SLFLSTP002\SLFLSTP002.aspx.vb">
+      <DependentUpon>SLFLSTP002.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Watch\SLFLSTP003\SLFLSTP003.aspx.designer.vb">
+      <DependentUpon>SLFLSTP003.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\SLFLSTP003\SLFLSTP003.aspx.vb">
+      <DependentUpon>SLFLSTP003.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\TJKLSTP001\clsKessaiMST.vb" />
+    <Compile Include="Watch\TJKLSTP001\TJKLSTP001.aspx.designer.vb">
+      <DependentUpon>TJKLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\TJKLSTP001\TJKLSTP001.aspx.vb">
+      <DependentUpon>TJKLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\WATINQP001\WATINQP001.aspx.designer.vb">
+      <DependentUpon>WATINQP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\WATINQP001\WATINQP001.aspx.vb">
+      <DependentUpon>WATINQP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\WATLSTP001\WATLSTP001.aspx.designer.vb">
+      <DependentUpon>WATLSTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\WATLSTP001\WATLSTP001.aspx.vb">
+      <DependentUpon>WATLSTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\WATLSTP002\WATLSTP002.aspx.designer.vb">
+      <DependentUpon>WATLSTP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\WATLSTP002\WATLSTP002.aspx.vb">
+      <DependentUpon>WATLSTP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\WATOUTP001\WATOUTP001.aspx.designer.vb">
+      <DependentUpon>WATOUTP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\WATOUTP001\WATOUTP001.aspx.vb">
+      <DependentUpon>WATOUTP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\WATOUTP002\WATOUTP002.aspx.designer.vb">
+      <DependentUpon>WATOUTP002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\WATOUTP002\WATOUTP002.aspx.vb">
+      <DependentUpon>WATOUTP002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\WATOUTP026\WATOUTP026.aspx.designer.vb">
+      <DependentUpon>WATOUTP026.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\WATOUTP026\WATOUTP026.aspx.vb">
+      <DependentUpon>WATOUTP026.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\WATOUTP027\WATOUTP027.aspx.designer.vb">
+      <DependentUpon>WATOUTP027.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\WATOUTP027\WATOUTP027.aspx.vb">
+      <DependentUpon>WATOUTP027.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\WATUPDP001\WATUPDP001.aspx.designer.vb">
+      <DependentUpon>WATUPDP001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\WATUPDP001\WATUPDP001.aspx.vb">
+      <DependentUpon>WATUPDP001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watch\SLFLSTP004\SLFLSTP004.aspx.designer.vb">
+      <DependentUpon>SLFLSTP004.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch\SLFLSTP004\SLFLSTP004.aspx.vb">
+      <DependentUpon>SLFLSTP004.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BBPREP001.resx">
+      <DependentUpon>BBPREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BBPREP002.resx">
+      <DependentUpon>BBPREP002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BBPREP003.resx">
+      <DependentUpon>BBPREP003.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BBPREP003_2.resx">
+      <DependentUpon>BBPREP003_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BPIREP002.resx">
+      <DependentUpon>BPIREP002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CDPREP001.resx">
+      <DependentUpon>CDPREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CDPREP001_1.resx">
+      <DependentUpon>CDPREP001_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CDPREP002.resx">
+      <DependentUpon>CDPREP002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CMPREP001.resx">
+      <DependentUpon>CMPREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CMPREP002.resx">
+      <DependentUpon>CMPREP002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CMPREP003.resx">
+      <DependentUpon>CMPREP003.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CMPREP004.resx">
+      <DependentUpon>CMPREP004.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP001.resx">
+      <DependentUpon>CNSREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP002.resx">
+      <DependentUpon>CNSREP002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP004.resx">
+      <DependentUpon>CNSREP004.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP006.resx">
+      <DependentUpon>CNSREP006.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP008.resx">
+      <DependentUpon>CNSREP008.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP009.resx">
+      <DependentUpon>CNSREP009.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP009_1.resx">
+      <DependentUpon>CNSREP009_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP009_2.resx">
+      <DependentUpon>CNSREP009_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP010.resx">
+      <DependentUpon>CNSREP010.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP013.resx">
+      <DependentUpon>CNSREP013.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP015.resx">
+      <DependentUpon>CNSREP015.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP016.resx">
+      <DependentUpon>CNSREP016.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP017.resx">
+      <DependentUpon>CNSREP017.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP019.resx">
+      <DependentUpon>CNSREP019.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CNSREP020.resx">
+      <DependentUpon>CNSREP020.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DLCREP001.resx">
+      <DependentUpon>DLCREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DOCREP002.resx">
+      <DependentUpon>DOCREP002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DOCREP002_1.resx">
+      <DependentUpon>DOCREP002_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DOCREP002_2.resx">
+      <DependentUpon>DOCREP002_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DOCREP003.resx">
+      <DependentUpon>DOCREP003.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DOCREP004.resx">
+      <DependentUpon>DOCREP004.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DOCREP005.resx">
+      <DependentUpon>DOCREP005.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DOCREP006.resx">
+      <DependentUpon>DOCREP006.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DSUREP001.resx">
+      <DependentUpon>DSUREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ETCREP017.resx">
+      <DependentUpon>ETCREP017.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ETCREP018.resx">
+      <DependentUpon>ETCREP018.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ETCREP020.resx">
+      <DependentUpon>ETCREP020.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ETCREP021.resx">
+      <DependentUpon>ETCREP021.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ICHREP001.resx">
+      <DependentUpon>ICHREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\MNTREP001.resx">
+      <DependentUpon>MNTREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\MNTREP003.resx">
+      <DependentUpon>MNTREP003.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\MNTREP004.resx">
+      <DependentUpon>MNTREP004.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\MNTREP005.resx">
+      <DependentUpon>MNTREP005.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\MSTREP001.resx">
+      <DependentUpon>MSTREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\MSTREP002.resx">
+      <DependentUpon>MSTREP002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\MSTREP040.resx">
+      <DependentUpon>MSTREP040.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\MSTREP055.resx">
+      <DependentUpon>MSTREP055.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\MSTREP056.resx">
+      <DependentUpon>MSTREP056.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\REPREP002.resx">
+      <DependentUpon>REPREP002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\REPREP003.resx">
+      <DependentUpon>REPREP003.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\REPREP058.resx">
+      <DependentUpon>REPREP058.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\REQREP001.resx">
+      <DependentUpon>REQREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\REQREP002.resx">
+      <DependentUpon>REQREP002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\REQREP003.resx">
+      <DependentUpon>REQREP003.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\REQREP004.resx">
+      <DependentUpon>REQREP004.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RETREP001.resx">
+      <DependentUpon>RETREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RETREP002.resx">
+      <DependentUpon>RETREP002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SERREP004.resx">
+      <DependentUpon>SERREP004.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SLFREP001.resx">
+      <DependentUpon>SLFREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP001.resx">
+      <DependentUpon>TBRREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP002.resx">
+      <DependentUpon>TBRREP002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP002_1.resx">
+      <DependentUpon>TBRREP002_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP002_2.resx">
+      <DependentUpon>TBRREP002_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP003.resx">
+      <DependentUpon>TBRREP003.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP004.resx">
+      <DependentUpon>TBRREP004.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP005.resx">
+      <DependentUpon>TBRREP005.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP006.resx">
+      <DependentUpon>TBRREP006.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP007.resx">
+      <DependentUpon>TBRREP007.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP008.resx">
+      <DependentUpon>TBRREP008.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP009.resx">
+      <DependentUpon>TBRREP009.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP010.resx">
+      <DependentUpon>TBRREP010.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP011.resx">
+      <DependentUpon>TBRREP011.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP012.resx">
+      <DependentUpon>TBRREP012.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP013.resx">
+      <DependentUpon>TBRREP013.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP013_1.resx">
+      <DependentUpon>TBRREP013_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP013_2.resx">
+      <DependentUpon>TBRREP013_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP014.resx">
+      <DependentUpon>TBRREP014.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP014_1.resx">
+      <DependentUpon>TBRREP014_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP014_2.resx">
+      <DependentUpon>TBRREP014_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP015.resx">
+      <DependentUpon>TBRREP015.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP016.resx">
+      <DependentUpon>TBRREP016.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP017.resx">
+      <DependentUpon>TBRREP017.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TBRREP018.resx">
+      <DependentUpon>TBRREP018.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\WATREP001.resx">
+      <DependentUpon>WATREP001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\WATREP002.resx">
+      <DependentUpon>WATREP002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\WATREP004.resx">
+      <DependentUpon>WATREP004.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\WATREP005.resx">
+      <DependentUpon>WATREP005.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataSet\BRKUPDP001_D77_MINI_MANAGE.xsc">
+      <DependentUpon>BRKUPDP001_D77_MINI_MANAGE.xsd</DependentUpon>
+    </Content>
+    <Content Include="ar-webviewer-locale.json" />
+    <None Include="DataSet\BRKUPDP001_D77_MINI_MANAGE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BRKUPDP001_D77_MINI_MANAGE.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DataSet\BRKUPDP001_D77_MINI_MANAGE.xss">
+      <DependentUpon>BRKUPDP001_D77_MINI_MANAGE.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet\BRKUPDP001_D78_MINIMNG_DTIL.xsc">
+      <DependentUpon>BRKUPDP001_D78_MINIMNG_DTIL.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet\BRKUPDP001_D78_MINIMNG_DTIL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BRKUPDP001_D78_MINIMNG_DTIL.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DataSet\BRKUPDP001_D78_MINIMNG_DTIL.xss">
+      <DependentUpon>BRKUPDP001_D78_MINIMNG_DTIL.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet\CNSUPDP001_D39_CNSTREQSPEC.xsc">
+      <DependentUpon>CNSUPDP001_D39_CNSTREQSPEC.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet\CMPINQP002_DISP.xsc">
+      <DependentUpon>CMPINQP002_DISP.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet\CMPINQP002_DISP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CMPINQP002_DISP.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DataSet\CMPINQP002_DISP.xss">
+      <DependentUpon>CMPINQP002_DISP.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet\CNSUPDP001_D39_CNSTREQSPEC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CNSUPDP001_D39_CNSTREQSPEC.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DataSet\CNSUPDP001_D39_CNSTREQSPEC.xss">
+      <DependentUpon>CNSUPDP001_D39_CNSTREQSPEC.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet\CNSUPDP001_D47_DLLSEND.xsc">
+      <DependentUpon>CNSUPDP001_D47_DLLSEND.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet\CNSUPDP001_D47_DLLSEND.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CNSUPDP001_D47_DLLSEND.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DataSet\CNSUPDP001_D47_DLLSEND.xss">
+      <DependentUpon>CNSUPDP001_D47_DLLSEND.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet\CNSUPDP001_D61_CNSTREQSPEC_HIST.xsc">
+      <DependentUpon>CNSUPDP001_D61_CNSTREQSPEC_HIST.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet\CNSUPDP001_D61_CNSTREQSPEC_HIST.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CNSUPDP001_D61_CNSTREQSPEC_HIST.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DataSet\CNSUPDP001_D61_CNSTREQSPEC_HIST.xss">
+      <DependentUpon>CNSUPDP001_D61_CNSTREQSPEC_HIST.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet\REQSELP001_D73_TROUBLE.xsc">
+      <DependentUpon>REQSELP001_D73_TROUBLE.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet\REQSELP001_D73_TROUBLE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>REQSELP001_D73_TROUBLE.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DataSet\REQSELP001_D73_TROUBLE.xss">
+      <DependentUpon>REQSELP001_D73_TROUBLE.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet\REQSELP001_D74_TROUBLE_DTIL.xsc">
+      <DependentUpon>REQSELP001_D74_TROUBLE_DTIL.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet\REQSELP001_D74_TROUBLE_DTIL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>REQSELP001_D74_TROUBLE_DTIL.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DataSet\REQSELP001_D74_TROUBLE_DTIL.xss">
+      <DependentUpon>REQSELP001_D74_TROUBLE_DTIL.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet\WATINQP001_DATASET.xsc">
+      <DependentUpon>WATINQP001_DATASET.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet\WATINQP001_DATASET.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WATINQP001_DATASET.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="DataSet\WATINQP001_DATASET.xss">
+      <DependentUpon>WATINQP001_DATASET.xsd</DependentUpon>
+    </Content>
+    <Content Include="Master\Site.Master" />
+    <Content Include="Master\Mst.Master" />
+    <Content Include="Master\COMUPDM40\COMUPDM40_Mst.Master" />
+    <Content Include="Master\COMUPDM54\COMUPDM54_Mst.Master" />
+    <Content Include="Master\COMUPDM55\COMUPDM55_Mst.Master" />
+    <Content Include="Master\Mst_Ref.Master" />
+    <Content Include="EdgeExpansion\app\manifest.json" />
+    <Content Include="EdgeExpansion\host\com.google.chrome.example.echo-win.json" />
+    <Content Include="EdgeExpansion\host\native-messaging-example-host.bat" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\SPC.pubxml" />
+    <None Include="My Project\PublishProfiles\TEST_Deploy.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Reference.master" />
+    <Content Include="Reference_Reverse.master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Log\" />
+    <Folder Include="PDFBuff\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClsDBFTP\DBFTP.vbproj">
+      <Project>{6f2274f1-28e6-4887-97c6-a461bfaf0063}</Project>
+      <Name>DBFTP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQL_DBCLS_LIB\SQL_DBCLS_LIB.vbproj">
+      <Project>{cbac86a1-4e3f-4982-bf94-a951d423c109}</Project>
+      <Name>SQL_DBCLS_LIB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54607</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49742/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
